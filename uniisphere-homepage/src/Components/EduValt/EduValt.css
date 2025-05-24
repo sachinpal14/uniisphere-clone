@@ -76,7 +76,6 @@
   justify-content: center;
   width: 130px;
   height: 40px;
-  background: rgba(220, 37, 31, 0.2);
   box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   text-align: center;
@@ -255,7 +254,6 @@
   justify-content: center;
   width: 100px;
   height: 32px;
-  background: rgba(220, 37, 31, 0.2);
   box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   text-align: center;
@@ -303,5 +301,64 @@
 @media (min-width: 768px) {
   .mobile-EduValt-container {
     display: none !important;
+  }
+}
+
+/* Extra Small Screens (e.g., very small mobiles) - Screens up to 480px */
+@media (max-width: 480px) {
+  .mobile-EduValt-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .mobile-EduValt-title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 15px;
+  }
+
+  .mobile-EduValt-content {
+    gap: 10px;
+  }
+
+  .mobile-EduValt-image-container {
+    width: 250px;
+    height: 187px; /* Maintain aspect ratio */
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .mobile-EduValt-image {
+    width: 150px;
+  }
+
+  .mobile-EduValt-text-and-tag-container {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .mobile-EduValt-tag-container {
+    gap: 4px;
+    max-width: 250px;
+  }
+
+  .mobile-EduValt-each-tag {
+    width: 90px;
+    height: 28px;
+    border-radius: 6px;
+  }
+
+  .mobile-EduValt-tag-text {
+    font-size: 10px;
+  }
+
+  .mobile-EduValt-footer-text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .mobile-EduValt-text-description {
+    font-size: 14px;
+    margin: 10px 0;
   }
 }

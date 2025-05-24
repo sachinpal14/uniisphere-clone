@@ -32,8 +32,8 @@ function App() {
           element={
             <>
             <Navbar />
-              {/* <AboutPage /> */}
-              {/* <Peoples /> */}
+              <AboutPage />
+              <Peoples />
               <Networking/>
               {/* <Connection /> */}
               <EduValt />

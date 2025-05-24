@@ -7,7 +7,7 @@ function EduValt() {
   const shouldReduceMotion = useReducedMotion();
   const [isDesktop, setIsDesktop] = useState(true);
   const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { amount: 0.3, once: true }); // Animation runs only once
+  const isInView = useInView(contentRef, { amount: 0.3, once: true }); // One-time animation
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 769px)");
@@ -34,10 +34,7 @@ function EduValt() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -46,10 +43,7 @@ function EduValt() {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -58,10 +52,7 @@ function EduValt() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -70,10 +61,7 @@ function EduValt() {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.4, ease: "easeOut" },
     },
   };
 
@@ -81,10 +69,7 @@ function EduValt() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
