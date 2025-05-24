@@ -27,7 +27,7 @@
 .Guidednest-title {
   align-self: flex-start;
   margin-left: 9.52%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 600px;
+  gap: 600px; /* Reduced gap for better responsiveness */
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 20px;
@@ -76,10 +76,11 @@
 .Guidednest-footer-text {
   font-size: 24px;
   text-align: start;
-  margin-left: 9.52%;
+  margin-left: 6%;
   margin-top: 20px;
   margin-bottom: 40px;
   font-weight: bold;
+  max-width: 450px;
   color: #333;
   text-transform: capitalize;
 }

@@ -195,13 +195,13 @@
 
 .mobile-uni-community-text {
   width: 100%;
-  font-size: clamp(0.625rem, 3vw, 0.75rem);
+  font-size: 20px; /* Matches InternShip's description size */
   font-weight: 300;
   line-height: 1.2;
-  color: #000;
-  text-align: center;
-  max-width: 95%;
-  margin-bottom: 0.625rem;
+  color: #000; /* Matches InternShip's description color */
+  text-align: center; /* Center text on mobile to match InternShip */
+  max-width: 450px; /* Matches InternShip's max-width */
+  margin-bottom: 30px; /* Adjusted to balance spacing */
 }
 
 .mobile-uni-community-footer {
@@ -248,9 +248,9 @@
   }
 
   .mobile-uni-community-text {
-    font-size: clamp(0.625rem, 3vw, 0.75rem);
-    max-width: 90%;
-    margin-bottom: 0.625rem;
+    font-size: 12px; /* Matches InternShip */
+    max-width: 90%; /* Matches InternShip */
+    margin-bottom: 20px; /* Adjusted for better spacing */
     margin-left: 0;
   }
 

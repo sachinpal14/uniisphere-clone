@@ -29,7 +29,7 @@
   text-transform: uppercase;
   font-weight: 900;
   color: #696868;
-  width: 55%;
+  width:85%;
   letter-spacing: -0.5px;
   text-align: start;
   font-family: "Inter", sans-serif;
@@ -40,10 +40,10 @@
 
 .human-library-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* As provided */
   align-items: center;
-  padding: 0.625rem;
-  flex-direction: row;
+  padding: 10px;
+  flex-direction: row; /* Image on left, text on right */
   width: 100%;
   gap: 1.25rem;
 }
@@ -86,7 +86,7 @@
   text-align: start;
   margin-right: auto;
   margin-left: 15%;
-  text-transform: uppercase;
+  text-transform: uppercase; /* Matches InternShip */
 }
 
 /* Tablet Styles - Screens up to 1024px (excluding iPad Mini) */

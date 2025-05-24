@@ -17,7 +17,7 @@
 
 .EduValt-title {
   align-self: flex-end;
-  margin-right: 9.52%;
+  margin-right: 8%;
   margin-bottom: 40px;
   font-style: normal;
   font-weight: 900;
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 600px; /* Reduced from 600px */
+  gap: 540px; /* Reduced from 600px */
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 20px;
@@ -110,7 +110,7 @@
 .EduValt-footer-text {
   font-size: 24px;
   text-align: end;
-  margin-right: 13%;
+  margin-right: 8%;
   margin-top: 20px;
   margin-bottom: 40px;
   font-weight: bold;
