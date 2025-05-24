@@ -138,7 +138,7 @@
 }
 
 .mobile-uni-blog-title {
-  font-size: 24px; /* Matches InternShip's mobile title size */
+  font-size: 30px; /* Matches InternShip's mobile title size */
   font-weight: 900; /* Matches InternShip */
   color: #696868;
   width: 100%;
@@ -182,17 +182,17 @@
 
 .mobile-uni-blog-text {
   width: 100%;
-  font-size: 12px; /* Matches InternShip's mobile description size */
+  font-size: 16px; /* Matches InternShip's mobile description size */
   font-weight: 400;
   line-height: 1.2;
-  color: #000; /* Matches InternShip's description color */
+  color: #333; /* Matches InternShip's description color */
   text-align: center; /* Ensure centered */
   max-width: 90%; /* Matches InternShip */
   margin: 0 auto 10px; /* Center with auto margins, match InternShip spacing */
 }
 
 .mobile-uni-blog-footer {
-  font-size: 14px; /* Matches InternShip's mobile footer size */
+  font-size: 18px; /* Matches InternShip's mobile footer size */
   font-weight: 700;
   display: flex;
   align-self: center;
