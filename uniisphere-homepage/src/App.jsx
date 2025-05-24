@@ -44,9 +44,9 @@ function App() {
               <HumanLibrary />
               <Blog />
               <Community/>
-              {/* <Collaborates /> */}
-              {/* <OurGoal /> */}
-              {/* <Features /> */}
+              <Collaborates />
+              <OurGoal />
+              <Features />
             </>
           }
         />

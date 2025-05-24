@@ -1,15 +1,25 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import "./Networking.css";
-import NetworkingBackground from "./NetwokingBackground.svg";
+import NetworkingBackground from "./NetworkingBackground.svg";
 import NetworkingSVG from "./Networking.svg";
 
 function Networking() {
+  const shouldReduceMotion = useReducedMotion();
+  const [isDesktop, setIsDesktop] = useState(true);
   const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { amount: 0.3, once: true }); // One-time animation
+  const isInView = useInView(contentRef, { amount: 0.3, once: true });
 
-  // Debug: Log isInView state
-  console.log("Networking isInView:", isInView);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mediaQuery.matches);
+    const handleResize = () => setIsDesktop(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
+
+  // Debug: Log isInView and isDesktop
+  console.log("Networking isInView:", isInView, "isDesktop:", isDesktop);
 
   // Animation variants
   const containerVariants = {
@@ -64,9 +74,9 @@ function Networking() {
         className="networking-container"
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
         aria-label="Networking Section"
-        style={{ minHeight: "100vh" }} // Ensure visibility
+        style={{ minHeight: "100vh" }}
       >
         <motion.h1
           className="Our-Features-homepage"
@@ -107,7 +117,7 @@ function Networking() {
         className="mobile-networking-container"
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
         aria-label="Mobile Networking Section"
       >
         <motion.h1
@@ -122,7 +132,7 @@ function Networking() {
         >
           NETWORKING
         </motion.h1>
-        <div className="mobile-networking-content" ref={contentRef}>
+        <div className="mobile-networking-content">
           <div className="mobile-networking-image-wrapper">
             <motion.img
               src={NetworkingSVG}

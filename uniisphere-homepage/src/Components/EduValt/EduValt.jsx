@@ -7,15 +7,18 @@ function EduValt() {
   const shouldReduceMotion = useReducedMotion();
   const [isDesktop, setIsDesktop] = useState(true);
   const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { amount: 0.3, once: true }); // One-time animation
+  const isInView = useInView(contentRef, { amount: 0.3, once: true });
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 769px)");
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
     setIsDesktop(mediaQuery.matches);
     const handleResize = () => setIsDesktop(mediaQuery.matches);
     mediaQuery.addEventListener("change", handleResize);
     return () => mediaQuery.removeEventListener("change", handleResize);
   }, []);
+
+  // Debug: Log isInView and isDesktop
+  console.log("EduValt isInView:", isInView, "isDesktop:", isDesktop);
 
   // Animation variants
   const containerVariants = {
@@ -74,7 +77,7 @@ function EduValt() {
   };
 
   const tags = [
-    { text: "E-books" },
+    { text: "E-books", alt: "E-books tag" },
     { text: "Notes", alt: "Notes tag" },
     { text: "References", alt: "References tag" },
     { text: "Novels", alt: "Novels tag" },
@@ -88,6 +91,7 @@ function EduValt() {
         initial="hidden"
         animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
         aria-label="Edu Vault Section"
+        style={{ minHeight: "100vh" }}
       >
         <motion.div className="EduValt-title" variants={titleVariants}>
           Edu Vault
@@ -119,6 +123,7 @@ function EduValt() {
               alt="Edu Vault feature"
               variants={imageVariants}
               aria-label="Edu Vault feature illustration"
+              onError={() => console.error("Failed to load Edu.svg")}
             />
           </div>
         </div>
@@ -137,7 +142,7 @@ function EduValt() {
         <motion.div className="mobile-EduValt-title" variants={titleVariants}>
           Edu Vault
         </motion.div>
-        <div className="mobile-EduValt-content" ref={contentRef}>
+        <div className="mobile-EduValt-content">
           <div className="mobile-EduValt-image-container">
             <motion.img
               className="mobile-EduValt-image"
@@ -145,6 +150,7 @@ function EduValt() {
               alt="Edu Vault feature"
               variants={imageVariants}
               aria-label="Edu Vault feature illustration"
+              onError={() => console.error("Failed to load Edu.svg (mobile)")}
             />
           </div>
           <motion.div
