@@ -1,0 +1,137 @@
+.our-goal-section {
+  position: relative;
+  padding: 40px 20px;
+  text-align: left;
+  max-width: 60%;
+  margin: 50px auto;
+  min-height: 300px;
+}
+
+/* Decorative background shapes */
+.our-goal-section::before,
+.our-goal-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.our-goal-section::before {
+  width: 100px;
+  height: 100px;
+  background-color: #f5e6cc;
+  top: 10px;
+  left: -50px;
+}
+
+.our-goal-section::after {
+  width: 120px;
+  height: 120px;
+  background-color: #d6eaff;
+  bottom: 10px;
+  right: -60px;
+}
+
+.our-goal-title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.our-goal-description {
+  font-size: 28px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .our-goal-section {
+    padding: 30px 15px;
+    max-width: 80%;
+  }
+
+  .our-goal-title {
+    font-size: 4rem;
+  }
+
+  .our-goal-description {
+    font-size: 24px;
+  }
+
+  .our-goal-section::before {
+    width: 80px;
+    height: 80px;
+    left: -40px;
+  }
+
+  .our-goal-section::after {
+    width: 100px;
+    height: 100px;
+    right: -50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .our-goal-section {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+
+  .our-goal-title {
+    font-size: 2.5rem;
+  }
+
+  .our-goal-description {
+    font-size: 18px;
+  }
+
+  .our-goal-section::before {
+    width: 60px;
+    height: 60px;
+    left: -30px;
+  }
+
+  .our-goal-section::after {
+    width: 80px;
+    height: 80px;
+    right: -40px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .our-goal-section {
+    padding: 15px 10px;
+    max-width: 95%;
+    margin: 20px auto;
+  }
+
+  .our-goal-title {
+    font-size: 1.8rem;
+  }
+
+  .our-goal-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .our-goal-section::before {
+    width: 40px;
+    height: 40px;
+    left: -20px;
+    top: 20px;
+  }
+
+  .our-goal-section::after {
+    width: 50px;
+    height: 50px;
+    right: -25px;
+    bottom: 20px;
+  }
+}

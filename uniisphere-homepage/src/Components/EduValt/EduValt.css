@@ -1,0 +1,375 @@
+.EduValt-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.EduValt-title {
+  align-self: flex-end; /* Align to the right */
+  margin-right: 9.52%; /* Matching Networking's margin */
+  margin-bottom: 50px;
+  font-family: "Inter"; /* Matching Networking's font */
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px; /* Matching the large size in the image */
+  line-height: 77px;
+  color: #696868; /* Matching the gray color in the image */
+  text-transform: uppercase; /* As per the image */
+}
+
+.EduValt-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 350px; /* Matching Networking's gap */
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  flex-direction: row; /* Text on left, image on right */
+}
+
+.EduValt-image-container {
+  background-image: url("./EduBackground.svg"); /* Assuming a background like Networking */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.EduValt-image {
+  width: 300px; /* Matching Networking's image width */
+  height: auto;
+}
+
+.EduValt-text-and-tag-container {
+  font-size: 18px; /* Matching Networking's description font-size */
+  color: #333; /* Matching Networking's description color */
+  max-width: 400px; /* Matching Networking's description max-width */
+  text-align: left; /* Matching Networking's description text-align */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjusted for tags */
+}
+
+.EduValt-tag-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 10px; /* Gap between tags, matching the image */
+  max-width: 450px; /* Ensure the grid fits two tags per line */
+}
+
+.EduValt-each-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  background: rgba(220, 37, 31, 0.2);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Specific background colors for each tag as per the image */
+.EduValt-each-tag:nth-child(1) {
+  background-color: #FFD7D7; /* Light pink for E-Books */
+}
+
+.EduValt-each-tag:nth-child(2) {
+  background-color: #E5E2FF; /* Light purple for Notes */
+}
+
+.EduValt-each-tag:nth-child(3) {
+  background-color: #80898E33; /* Light gray for References */
+}
+
+.EduValt-each-tag:nth-child(4) {
+  background-color: #D4F5EF; /* Light teal for Novels */
+}
+
+.Eduvalt-tag-text {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize; /* Match the image's capitalization */
+}
+
+.EduValt-footer-text {
+  font-size: 24px; /* Matching Networking's tagline font-size */
+  text-align: end; /* Adjusted to end as per the image */
+  font-weight: bold;
+  color: #333; /* Matching Networking's tagline color */
+  margin-top: 20px;
+  margin-right: 13%;
+  margin-bottom: 50px;
+  text-transform: capitalize; /* Matching the image */
+}
+
+/* iPad (Tablet) Responsiveness - Screens up to 1024px */
+@media (max-width: 1024px) {
+  .EduValt-container {
+    padding: 15px;
+  }
+
+  .EduValt-title {
+    align-self: flex-end;
+    margin-right: 9.52%;
+    text-align: start;
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 48px; /* Slightly smaller for iPad */
+    line-height: 58px;
+  }
+
+  .EduValt-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; /* Reduce gap for iPad */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: row; /* Ensure text on left, image on right for iPad */
+  }
+
+  .EduValt-image-container {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .EduValt-image {
+    width: 250px; /* Slightly smaller for iPad */
+  }
+
+  .EduValt-text-and-tag-container {
+    font-size: 16px; /* Slightly smaller for iPad */
+    max-width: 350px; /* Adjust for iPad */
+    text-align: left;
+    gap: 15px;
+  }
+
+  .EduValt-tag-container {
+    gap: 8px;
+    max-width: 400px;
+  }
+
+  .EduValt-each-tag {
+    width: 120px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .Eduvalt-tag-text {
+    font-size: 14px;
+  }
+
+  .EduValt-footer-text {
+    font-size: 20px;
+    margin-right: 9.52%;
+    text-align: end;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile Responsiveness - Screens up to 768px */
+@media (max-width: 768px) {
+  .EduValt-container {
+    padding: 10px;
+    flex-direction: column; /* Stack elements vertically for better readability */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    min-height: auto;
+  }
+
+  .EduValt-title {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+  }
+
+  .EduValt-content {
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
+  .EduValt-image-container {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .EduValt-image {
+    width: 200px; /* Smaller for mobile */
+  }
+
+  .EduValt-text-and-tag-container {
+    font-size: 14px;
+    max-width: 90%; /* Fit text to screen */
+    text-align: center;
+    gap: 10px;
+  }
+
+  .EduValt-tag-container {
+    display: grid; /* Keep grid layout on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    max-width: 300px;
+  }
+
+  .EduValt-each-tag {
+    width: 100px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .Eduvalt-tag-text {
+    font-size: 12px;
+  }
+
+  .EduValt-footer-text {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+ /*  CSS  for the  switch the desktop and the mobile view */  
+
+ @media screen and (min-width: 768px) {
+  .mobile-EduValt-container {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .EduValt-container {
+    display: none !important;
+  }
+}
+
+
+
+/* Mobie view */ 
+
+.Mobile-EduValt-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.Mobile-EduValt-title {
+  align-self: center; /* Align to the right */
+      font-family: "Inter"; /* Matching Networking's font */
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45px; /* Matching the large size in the image */
+  line-height: 77px;
+  color: #696868; /* Matching the gray color in the image */
+  text-transform: uppercase; /* As per the image */
+}
+
+.Mobile-EduValt-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  flex-direction: row; /* Text on left, image on right */
+}
+
+.Mobile-EduValt-image-container {
+  background-image: url("./EduBackground.svg"); /* Assuming a background like Networking */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  width: 400px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Mobile-EduValt-image {
+  width: 300px; /* Matching Networking's image width */
+  height: auto;
+}
+
+.Mobile-EduValt-text-and-tag-container {
+  font-size: 18px; /* Matching Networking's description font-size */
+  color: #333; /* Matching Networking's description color */
+  max-width: 400px; /* Matching Networking's description max-width */
+  text-align: left; /* Matching Networking's description text-align */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjusted for tags */
+}
+
+.Mobile-EduValt-tag-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 10px; /* Gap between tags, matching the image */
+  max-width: 450px; /* Ensure the grid fits two tags per line */
+}
+
+.Mobile-EduValt-each-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  background: rgba(220, 37, 31, 0.2);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Specific background colors for each tag as per the image */
+.Mobile-EduValt-each-tag:nth-child(1) {
+  background-color: #FFD7D7; /* Light pink for E-Books */
+}
+
+.Mobile-EduValt-each-tag:nth-child(2) {
+  background-color: #E5E2FF; /* Light purple for Notes */
+}
+
+.Mobile-EduValt-each-tag:nth-child(3) {
+  background-color: #80898E33; /* Light gray for References */
+}
+
+.Mobile-EduValt-each-tag:nth-child(4) {
+  background-color: #D4F5EF; /* Light teal for Novels */
+}
+
+.Mobile-Eduvalt-tag-text {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize; /* Match the image's capitalization */
+}
+
+.Mobile-EduValt-footer-text {
+  font-size: 24px; /* Matching Networking's tagline font-size */
+  text-align: end; /* Adjusted to end as per the image */
+  font-weight: bold;
+  color: #333; /* Matching Networking's tagline color */
+  margin-top: 20px;
+   text-transform: capitalize; /* Matching the image */
+}

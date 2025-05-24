@@ -1,0 +1,54 @@
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none; /* important: allows clicks to pass through */
+  overflow: hidden;
+}
+
+.bg-img {
+  width: 80px;
+  height: auto;
+  opacity: 0.6;
+  position: absolute;
+}
+
+/* Position each image individually */
+.img-0 { top: 5%; left: 0%; }
+.img-1 { top: 40%; left: 0%; }
+/* ... up to .img-19 like before */
+
+
+/* Manually setting different positions for 20 images */
+.img-0 {
+  display: none;
+ }
+.img-1 { top: 42%; left: 3%; }
+.img-2 { top: 45%; left: 40%; }
+.img-3 { top: 0%; left: 20%; }
+.img-4 { top: 25%; left: 67%; }
+.img-5 { top: 45%; left: 25%; } 
+/* black */
+.img-6 {top: 40%; left: 80%;  }
+.img-7 { top: 80%; left: 5%; }
+.img-8 { top: 80%; left: 90%; }
+/* .img-9 { top: 55%; left: 10%; } */
+.img-10 { top: 5%; left: 90%; }
+.img-11 { 
+  display: none;
+ }
+.img-12 { top:65%; left: 35%; }
+.img-13 { top: 80%; left: 60%; }
+.img-14 { display: none; }
+.img-15 { top: 80%; left: 30%; }
+
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .img-0,.img-6,.img-2,.img-5,.img-6,.img-10,.img-11, .img-12, .img-13, .img-14, 
+  .img-15, .img-16,  .img-18, .img-19 {
+    display: none;
+  }
+}

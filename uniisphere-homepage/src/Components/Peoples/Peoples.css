@@ -1,0 +1,159 @@
+.peoples-section {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0 150px;
+  min-height: 600px;
+}
+
+.People-heading {
+ font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+margin-bottom: 40px;
+}
+
+.peoples-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.peoples-container:not(.second-row) {
+  margin-bottom: 40px;
+}
+
+.person-card {
+  border-radius: 10px;
+  padding: 10px;
+  width: 22%;
+  text-align: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+/* Unique colors for each card */
+.color-1 { background-color: #f5e7e7; }
+.color-2 { background-color: #e7f5e7; }
+.color-3 { background-color: #e7e7f5; }
+.color-4 { background-color: #f5f5e7; }
+.color-5 { background-color: #f5e7f5; }
+.color-6 { background-color: #e7f5f5; }
+.color-7 { background-color: #f5f5e7; }
+.color-8 { background-color: #e7e7f5; }
+
+.person-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.person-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.person-card .role {
+  font-size: 16px;
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.person-card .details {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .peoples-section {
+    margin: 0 40px;
+  }
+
+  .People-heading {
+    font-size: 3.5rem;
+  }
+
+  .peoples-container {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .person-card {
+    width: 45%;
+    margin-right: auto;
+    /* margin-bottom: auto; */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .person-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .person-card h3 { font-size: 18px; }
+  .person-card .role { font-size: 14px; }
+  .person-card .details { font-size: 13px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .peoples-section {
+    margin: 0 20px;
+  }
+
+  .People-heading {
+    font-size: 3rem;
+  }
+
+  .person-card {
+    width: 48%;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .person-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .person-card h3 { font-size: 16px; }
+  .person-card .role { font-size: 13px; }
+  .person-card .details { font-size: 12px; }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .peoples-section {
+    margin: 0 10px;
+  }
+
+  .People-heading {
+    font-size: 2.5rem;
+  }
+
+  .peoples-container {
+    gap: 0;
+  }
+
+  .person-card {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .person-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .person-card h3 { font-size: 14px; }
+  .person-card .role { font-size: 12px; }
+  .person-card .details { font-size: 11px; }
+}

@@ -1,0 +1,188 @@
+.human-library-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;  */
+  width: 100%;
+  margin: auto;
+  max-width: 100vw;
+  padding-top: 20px;
+  min-height: 100vh;
+}
+
+.human-library-title {
+  font-size: 50px; /* Reduced to match InternShip's title size */
+  text-transform: uppercase;
+  font-weight: 900; /* Increased weight to match InternShip */
+  color: #696868;
+  width: 55%;
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-family: "Inter"; /* Added to match InternShip */
+  line-height: 38px; /* Added to match InternShip */
+  margin-bottom: 20px; /* Added to match InternShip */
+}
+
+.human-library-content {
+  display: flex;
+  justify-content: space-around; /* Adjusted to center content */
+  align-items: center;
+  padding: 10px;
+  flex-direction: row; /* Text on left, image on right */
+  width: 100%;
+  
+}
+
+.human-library-image-container {
+  background-image: url("./BackgroundHL.svg"); /* Updated to use InternShip SVG */
+  background-size: contain; /* Changed to contain to match InternShip */
+  background-repeat: no-repeat; /* Added to match InternShip */
+  background-position: center;
+  height: 309px; /* Updated to match InternShip's dimensions */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px; /* Updated to match InternShip's dimensions */
+  padding: 20px; /* Added to match InternShip */
+  border-radius: 10px; /* Added to match InternShip */
+}
+
+.human-library-text {
+  width: 45%;
+  font-size: 20px; /* Reduced to match InternShip's description size */
+  font-weight: 300;
+  line-height: 1.2;
+  color: #000000; /* Updated to match InternShip's description color */
+  text-align: left; /* Added to align text to the left */
+  max-width: 450px; /* Added to match InternShip's max-width */
+}
+
+.human-library-footer {
+  font-size: 18px; /* Reduced to match InternShip's footer size */
+  font-weight: 700;
+
+  color: #333; /* Updated to match InternShip's footer color */
+  width: 100%;
+  margin-left: 210px;
+  /* Adjusted to match InternShip's centered layout */
+  margin-bottom: 20px; /* Reduced to match InternShip */
+  text-align: start; /* Added to match InternShip */
+  text-transform: uppercase; /* Added to match InternShip */
+  /* margin-left: 15%; */
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .human-library-container {
+    padding-top: 30px;
+    max-width: 90vw;
+  }
+
+  .human-library-title {
+    font-size: 28px; /* Reduced to match InternShip */
+    line-height: 34px; /* Added to match InternShip */
+    margin-bottom: 15px; /* Added to match InternShip */
+  }
+
+  .human-library-content {
+    padding: 8px;
+    flex-direction: row; /* Maintain row layout for tablet */
+    gap: 20px; /* Reduced to match InternShip */
+  }
+
+  .human-library-image-container {
+    width: 450px; /* Scaled down to match InternShip */
+    height: 253px; /* Maintain aspect ratio (550:309) */
+    padding: 15px; /* Added to match InternShip */
+    border-radius: 8px; /* Added to match InternShip */
+  }
+
+  .human-library-text {
+    width: 48%;
+    font-size: 13px; /* Reduced to match InternShip */
+    max-width: 350px; /* Adjusted to match InternShip */
+  }
+
+  .human-library-footer {
+    font-size: 16px; /* Reduced to match InternShip */
+    margin-bottom: 15px; /* Reduced to match InternShip */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .human-library-container {
+    padding-top: 20px;
+    max-width: 95vw;
+    align-items: center;
+    min-height: auto; /* Added to match InternShip */
+  }
+
+  .human-library-title {
+    font-size: 24px; /* Reduced to match InternShip */
+    line-height: 29px; /* Added to match InternShip */
+    margin-bottom: 10px; /* Added to match InternShip */
+    text-align: center; /* Already centered */
+  }
+
+  .human-library-content {
+    flex-direction: column; /* Stack vertically to match InternShip */
+    align-items: center;
+    padding: 5px;
+    gap: 15px; /* Added to match InternShip */
+  }
+
+  .human-library-image-container {
+    width: 350px; /* Scaled down to match InternShip */
+    height: 197px; /* Maintain aspect ratio (550:309) */
+    padding: 10px; /* Added to match InternShip */
+    border-radius: 6px; /* Added to match InternShip */
+    margin-bottom: 0; /* Adjusted to match InternShip */
+  }
+
+  .human-library-text {
+    width: 100%;
+    font-size: 12px; /* Reduced to match InternShip */
+    max-width: 90%; /* Added to match InternShip */
+    text-align: center; /* Center text on mobile to match InternShip */
+  }
+
+  .human-library-footer {
+    font-size: 14px; /* Reduced to match InternShip */
+    width: 100%; /* Already full width */
+    margin-bottom: 10px; /* Reduced to match InternShip */
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .human-library-container {
+    padding-top: 15px;
+    max-width: 100vw;
+    gap: 10px; /* Added to match InternShip */
+  }
+
+  .human-library-title {
+    font-size: 20px; /* Reduced to match InternShip */
+    line-height: 24px; /* Added to match InternShip */
+    margin-bottom: 8px; /* Added to match InternShip */
+    letter-spacing: 0;
+  }
+
+  .human-library-content {
+    gap: 10px; /* Added to match InternShip */
+  }
+
+  .human-library-image-container {
+    width: 300px; /* Scaled down to match InternShip */
+    height: 169px; /* Maintain aspect ratio (550:309) */
+  }
+
+  .human-library-text {
+    font-size: 11px; /* Reduced to match InternShip */
+  }
+
+  .human-library-footer {
+    font-size: 12px; /* Reduced to match InternShip */
+    margin-bottom: 8px; /* Reduced to match InternShip */
+  }
+}

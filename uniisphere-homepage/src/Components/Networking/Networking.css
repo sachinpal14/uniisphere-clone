@@ -1,0 +1,228 @@
+.networking-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.networking-title {
+  margin-left: 9.52%;
+  text-align: start;
+  margin-bottom: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 77px;
+  color: #696868;
+}
+
+.networking-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 350px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.networking-image-wrapper {
+  background-image: url("./NetwokingBackground.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px; /* Adds some space around the image */
+  border-radius: 10px; /* Optional: for a smoother look */
+}
+
+.networking-illustration {
+  width: 300px;
+}
+
+.networking-description {
+  font-size: 18px;
+  color: #333;
+  max-width: 400px;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.networking-tagline {
+  font-size: 24px;
+  text-align: start;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-left: 9.52%;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+.Our-Features-homepage {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 101px;
+
+  color: #000000;
+}
+
+/* iPad (Tablet) Responsiveness - Screens up to 1024px */
+@media (max-width: 1024px) {
+  .networking-container {
+    padding: 15px;
+  }
+
+  .networking-title {
+    font-size: 48px;
+    line-height: 58px;
+    margin-left: 5%;
+    margin-bottom: 30px;
+  }
+
+  .networking-content {
+    gap: 50px; /* Reduce the gap for tablets */
+    justify-content: center;
+  }
+
+  .networking-illustration {
+    width: 250px; /* Slightly smaller image for tablets */
+  }
+
+  .networking-description {
+    font-size: 16px;
+    max-width: 350px;
+  }
+
+  .networking-tagline {
+    font-size: 20px;
+    margin-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile Responsiveness - Screens up to 768px */
+@media (max-width: 768px) {
+  .networking-container {
+    padding: 10px;
+  }
+
+  .networking-title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 0;
+    text-align: center; /* Center title for mobile */
+    margin-bottom: 20px;
+  }
+
+  .networking-content {
+    flex-direction: column; /* Stack image and text vertically */
+    gap: 20px;
+    align-items: center;
+  }
+
+  .networking-illustration {
+    width: 200px; /* Smaller image for mobile */
+  }
+
+  .networking-description {
+    font-size: 14px;
+    max-width: 50%; /* Ensure text fits well */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .networking-tagline {
+    font-size: 18px;
+    margin-left: 0;
+    text-align: center; /* Center tagline for mobile */
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+/* CSS to switch between mobile and the desktop view */
+
+@media screen and (min-width: 768px) {
+  .mobile-networking-container {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .networking-container {
+    display: none !important;
+  }
+}
+
+
+
+/* Mobile view CSS*/
+
+.mobile-networking-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  min-height: 400px;
+  text-align: center;
+}
+
+.mobile-networking-title {
+  margin-left: 0;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 77px;
+  color: #696868;
+}
+
+.mobile-networking-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.mobile-networking-image-wrapper {
+  background-image: url("./NetwokingBackground.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px; /* Adds some space around the image */
+  border-radius: 10px; /* Optional: for a smoother look */
+}
+
+.mobile-networking-illustration {
+  width: 300px;
+}
+
+.mobile-networking-description {
+  font-size: 18px;
+  color: #333;
+  max-width: 400px;
+  text-align: center; /* Align text to the left for better readability */
+}
+
+.mobile-networking-tagline {
+  font-size: 24px;
+  text-align: start;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.mobile-Our-Features-homepage {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 61px;
+  margin-bottom: 20px;
+  color: #000000;
+}
