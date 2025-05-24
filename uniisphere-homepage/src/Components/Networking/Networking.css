@@ -1,28 +1,40 @@
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Desktop Styles */
 .networking-container {
   display: flex !important;
   flex-direction: column;
-  padding: 20px;
+  padding: 1.25rem;
   margin: 0 auto;
   width: 100%;
   max-width: 100vw;
-  /* min-height: 100vh; */
   text-align: center;
   position: relative;
-  /* background-color: #fafafa; Fallback */
   font-family: "Inter", sans-serif;
-  visibility: visible !important; /* Ensure visibility */
+  visibility: visible !important;
   opacity: 1 !important;
+  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation-iteration-count: 1;
 }
 
 .networking-title {
   margin-left: 6%;
   text-align: start;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   font-style: normal;
   font-weight: 900;
-  font-size: 64px;
-  line-height: 77px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
   color: #696868;
   text-transform: uppercase;
 }
@@ -31,9 +43,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 500px;
+  gap: clamp(2rem, 30vw, 31.25rem);
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .networking-image-wrapper {
@@ -41,104 +53,107 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  height: 300px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  width: 25rem;
+  height: 18.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #f0f0f0; Fallback */
 }
 
 .networking-illustration {
-  width: 300px;
+  width: 18.75rem;
   height: auto;
 }
 
 .networking-description {
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   color: #333;
-  max-width: 400px;
+  max-width: 25rem;
   text-align: left;
 }
 
 .networking-tagline {
-  font-size: 24px;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   text-align: start;
   margin-left: 8%;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
   font-weight: bold;
   color: #333;
   text-transform: capitalize;
-  max-width: 400px;
+  max-width: 25rem;
   line-height: 1.4;
 }
 
 .Our-Features-homepage {
   font-style: normal;
   font-weight: 700;
-  font-size: 50px;
-  line-height: 61px;
-  margin-bottom: 40px;
+  font-size: clamp(2rem, 4vw, 3.125rem);
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
   color: #000000;
   text-align: center;
 }
 
-/* Tablet Responsiveness - Screens up to 1024px */
+/* Tablet Responsiveness - Screens up to 1024px (excluding iPad Mini) */
 @media (max-width: 1024px) {
   .networking-container {
-    padding: 15px;
+    padding: 0.9375rem;
   }
 
   .networking-title {
-    font-size: 48px;
-    line-height: 58px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
     margin-left: 7%;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
 
   .networking-content {
-    gap: 50px;
-    padding: 0 15px;
+    gap: 3.125rem;
+    padding: 0 0.9375rem;
   }
 
   .networking-image-wrapper {
-    padding: 15px;
-    border-radius: 8px;
-    width: 350px;
-    height: 262px;
+    padding: 0.9375rem;
+    border-radius: 0.5rem;
+    width: 21.875rem;
+    height: 16.375rem;
   }
 
   .networking-illustration {
-    width: 250px;
+    width: 15.625rem;
   }
 
   .networking-description {
-    font-size: 16px;
-    max-width: 350px;
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    max-width: 21.875rem;
   }
 
   .networking-tagline {
-    font-size: 20px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     margin-left: 7%;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    max-width: 350px;
+    margin-top: 0.9375rem;
+    margin-bottom: 1.875rem;
+    max-width: 21.875rem;
   }
 
   .Our-Features-homepage {
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 30px;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 1.875rem;
   }
 }
 
-/* Mobile Responsiveness - Screens up to 767px */
-@media (max-width: 767px) {
+/* Mobile Responsiveness - Screens up to 768px (including iPad Mini) */
+@media only screen and (max-width: 768px) {
   .networking-container {
     display: none !important;
+  }
+
+  .mobile-networking-container {
+    display: flex !important; /* Explicitly ensure mobile container is shown */
   }
 }
 
@@ -146,25 +161,26 @@
 .mobile-networking-container {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 0.9375rem;
   margin: 0 auto;
   width: 100%;
   max-width: 100vw;
   min-height: auto;
   text-align: center;
   position: relative;
-  background-color: #fafafa;
   font-family: "Inter", sans-serif;
+  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation-iteration-count: 1;
 }
 
 .mobile-networking-title {
   font-style: normal;
   font-weight: 900;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  line-height: 1.2;
   color: #696868;
   text-transform: uppercase;
-  margin: 0 auto 20px;
+  margin: 0 auto 1.25rem;
 }
 
 .mobile-networking-content {
@@ -172,8 +188,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 0 10px;
+  gap: 0.9375rem;
+  padding: 0 0.625rem;
 }
 
 .mobile-networking-image-wrapper {
@@ -181,50 +197,49 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 10px;
-  border-radius: 6px;
-  width: 300px;
-  height: 225px;
+  padding: 0.625rem;
+  border-radius: 0.375rem;
+  width: clamp(15rem, 80vw, 18.75rem);
+  height: clamp(11.25rem, 60vw, 14.0625rem);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
 }
 
 .mobile-networking-illustration {
-  width: 200px;
+  width: clamp(10rem, 50vw, 12.5rem);
   height: auto;
 }
 
 .mobile-networking-description {
-  font-size: 16px;
+  font-size: clamp(0.875rem, 3vw, 1rem);
   color: #333;
-  max-width: 90%;
+  max-width: 95%;
   text-align: center;
-  margin: 15px 0;
+  margin: 0.9375rem 0;
 }
 
 .mobile-networking-tagline {
-  font-size: 18px;
+  font-size: clamp(1rem, 3.5vw, 1.125rem);
   font-weight: bold;
   color: #333;
   text-transform: capitalize;
-  margin: 15px 0;
-  max-width: 90%;
+  margin: 0.9375rem 0;
+  max-width: 95%;
   line-height: 1.4;
 }
 
 .mobile-Our-Features-homepage {
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  margin-bottom: 20px;
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
   color: #000000;
 }
 
-/* Hide mobile container on larger screens */
-@media (min-width: 768px) {
+/* Hide Mobile on Desktop */
+@media only screen and (min-width: 769px) {
   .mobile-networking-container {
     display: none !important;
   }
@@ -233,43 +248,43 @@
 /* Extra Small Screens - Screens up to 480px */
 @media (max-width: 480px) {
   .mobile-networking-container {
-    padding: 10px;
+    padding: 0.625rem;
   }
 
   .mobile-networking-title {
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 15px;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    line-height: 1.2;
+    margin-bottom: 0.9375rem;
   }
 
   .mobile-networking-content {
-    gap: 10px;
+    gap: 0.625rem;
   }
 
   .mobile-networking-image-wrapper {
-    width: 250px;
-    height: 187px;
-    padding: 8px;
-    border-radius: 4px;
+    width: clamp(12.5rem, 80vw, 15.625rem);
+    height: clamp(9.375rem, 60vw, 11.6875rem);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
   }
 
   .mobile-networking-illustration {
-    width: 180px;
+    width: clamp(9rem, 45vw, 11.25rem);
   }
 
   .mobile-networking-description {
-    font-size: 14px;
-    margin: 10px 0;
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+    margin: 0.625rem 0;
   }
 
   .mobile-networking-tagline {
-    font-size: 16px;
-    margin: 10px 0;
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    margin: 0.625rem 0;
   }
 
   .mobile-Our-Features-homepage {
-    font-size: 32px;
-    line-height: 38px;
-    margin-bottom: 15px;
+    font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+    line-height: 1.2;
+    margin-bottom: 0.9375rem;
   }
 }

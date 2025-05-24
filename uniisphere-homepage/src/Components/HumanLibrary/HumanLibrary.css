@@ -1,4 +1,4 @@
-/* Animation Keyframes (Added for consistency with previous sections) */
+/* Animation Keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -20,7 +20,7 @@
   max-width: 100vw;
   padding-top: 2rem;
   margin-bottom: 3.125rem;
-  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation: fadeIn 1s ease-in-out forwards;
   animation-iteration-count: 1;
 }
 
@@ -29,21 +29,21 @@
   text-transform: uppercase;
   font-weight: 900;
   color: #696868;
-  width:85%;
+  width: 75%;
   letter-spacing: -0.5px;
   text-align: start;
   font-family: "Inter", sans-serif;
-  margin-right: 15%;
   line-height: 1.2;
   margin-bottom: 3.125rem;
+  /* margin-right: 15%; */
 }
 
 .human-library-content {
   display: flex;
-  justify-content: space-around; /* As provided */
+  justify-content: space-around;
   align-items: center;
-  padding: 10px;
-  flex-direction: row; /* Image on left, text on right */
+  padding: 0.625rem;
+  flex-direction: row;
   width: 100%;
   gap: 1.25rem;
 }
@@ -86,7 +86,7 @@
   text-align: start;
   margin-right: auto;
   margin-left: 15%;
-  text-transform: uppercase; /* Matches InternShip */
+  text-transform: uppercase;
 }
 
 /* Tablet Styles - Screens up to 1024px (excluding iPad Mini) */
@@ -135,9 +135,13 @@
 }
 
 /* Mobile Responsiveness - Screens up to 768px (including iPad Mini) */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .human-library-container {
     display: none !important;
+  }
+
+  .mobile-human-library-container {
+    display: flex !important; /* Explicitly ensure mobile container is shown */
   }
 }
 
@@ -152,7 +156,7 @@
   max-width: 100vw;
   padding-top: 0.625rem;
   min-height: auto;
-  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation: fadeIn 1s ease-in-out forwards;
   animation-iteration-count: 1;
 }
 
@@ -221,7 +225,7 @@
 }
 
 /* Hide Mobile on Desktop */
-@media (min-width: 769px) {
+@media only screen and (min-width: 769px) {
   .mobile-human-library-container {
     display: none !important;
   }
