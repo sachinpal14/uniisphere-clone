@@ -32,8 +32,8 @@ function App() {
           element={
             <>
             <Navbar />
-              <AboutPage />
-              <Peoples />
+              {/* <AboutPage /> */}
+              {/* <Peoples /> */}
               <Networking/>
               {/* <Connection /> */}
               <EduValt />
@@ -44,8 +44,8 @@ function App() {
               <HumanLibrary />
               <Blog />
               <Community/>
-              <Collaborates />
-              <OurGoal />
+              {/* <Collaborates /> */}
+              {/* <OurGoal /> */}
               {/* <Features /> */}
             </>
           }

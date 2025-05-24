@@ -5,6 +5,7 @@
   max-width: 60%;
   margin: 50px auto;
   min-height: 300px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 /* Decorative background shapes */
@@ -34,18 +35,24 @@
 }
 
 .our-goal-title {
-  font-size: 5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px; /* Matches the original size */
+  line-height: 77px;
+  color: #000000;
+  margin-bottom: 40px; /* Reduced for better spacing */
   text-align: center;
 }
 
 .our-goal-description {
-  font-size: 28px;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  text-align: start;
 }
 
 /* Tablet */
@@ -53,26 +60,33 @@
   .our-goal-section {
     padding: 30px 15px;
     max-width: 80%;
+    min-height: 250px; /* Slightly reduced for smaller screens */
+    margin: 40px auto; /* Adjusted margin */
   }
 
   .our-goal-title {
-    font-size: 4rem;
+    font-size: 48px; /* Scaled down proportionally */
+    line-height: 58px; /* Maintains the original font-size to line-height ratio */
+    margin-bottom: 30px;
   }
 
   .our-goal-description {
-    font-size: 24px;
+    font-size: 18px; /* Slightly reduced for better readability */
+    line-height: 22px; /* Adjusted to maintain ratio */
   }
 
   .our-goal-section::before {
     width: 80px;
     height: 80px;
     left: -40px;
+    top: 15px; /* Slightly adjusted position */
   }
 
   .our-goal-section::after {
     width: 100px;
     height: 100px;
     right: -50px;
+    bottom: 15px; /* Slightly adjusted position */
   }
 }
 
@@ -81,26 +95,35 @@
   .our-goal-section {
     padding: 20px 15px;
     max-width: 90%;
+    min-height: 200px; /* Further reduced for mobile */
+    margin: 30px auto;
   }
 
   .our-goal-title {
-    font-size: 2.5rem;
+    font-size: 36px; /* Scaled down for mobile */
+    line-height: 44px; /* Maintains ratio */
+    margin-bottom: 20px;
+    text-align: center; /* Ensure centered text */
   }
 
   .our-goal-description {
-    font-size: 18px;
+    font-size: 16px; /* Adjusted for mobile readability */
+    line-height: 20px; /* Maintains ratio */
+    text-align: center; /* Centered for better mobile presentation */
   }
 
   .our-goal-section::before {
     width: 60px;
     height: 60px;
     left: -30px;
+    top: 10px;
   }
 
   .our-goal-section::after {
     width: 80px;
     height: 80px;
     right: -40px;
+    bottom: 10px;
   }
 }
 
@@ -108,30 +131,69 @@
 @media (max-width: 480px) {
   .our-goal-section {
     padding: 15px 10px;
-    max-width: 95%;
+    max-width: 90%;
+    min-height: 150px; /* Minimal height for small screens */
     margin: 20px auto;
   }
 
   .our-goal-title {
-    font-size: 1.8rem;
+    font-size: 28px; /* Further scaled down for small screens */
+    line-height: 34px; /* Maintains ratio */
+    margin-bottom: 15px;
+    text-align: center;
   }
 
   .our-goal-description {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 14px; /* Smallest size for readability */
+    line-height: 18px; /* Adjusted for better readability */
+    text-align: center;
   }
 
   .our-goal-section::before {
     width: 40px;
     height: 40px;
-    left: -20px;
-    top: 20px;
+    left: -15px; /* Adjusted to fit smaller screens */
+    top: 10px;
   }
 
   .our-goal-section::after {
     width: 50px;
     height: 50px;
-    right: -25px;
-    bottom: 20px;
+    right: -20px; /* Adjusted to fit smaller screens */
+    bottom: 10px;
+  }
+}
+
+/* Extra small screens (e.g., very small mobiles) */
+@media (max-width: 360px) {
+  .our-goal-section {
+    padding: 10px 5px;
+    max-width: 90%;
+    margin: 15px auto;
+  }
+
+  .our-goal-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .our-goal-description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .our-goal-section::before {
+    width: 30px;
+    height: 30px;
+    left: -10px;
+    top: 5px;
+  }
+
+  .our-goal-section::after {
+    width: 40px;
+    height: 40px;
+    right: -15px;
+    bottom: 5px;
   }
 }

@@ -1,68 +1,88 @@
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Styles */
 .Guidednest-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  /* min-height: 100vh; */
   text-align: center;
   position: relative;
+  animation: fadeIn 1s ease-in-out forwards; /* One-time animation */
+  animation-iteration-count: 1;
 }
 
 .Guidednest-title {
-  align-self: flex-start; /* Align to the left */
-  margin-left: 9.52%; /* Matching Networking's margin */
-  margin-bottom: 50px;
-  font-family: "Inter"; /* Matching Networking's font */
+  align-self: flex-start;
+  margin-left: 9.52%;
+  margin-bottom: 40px;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 64px; /* Matching EduValt's title size */
+  font-size: 64px;
   line-height: 77px;
-  color: #696868; /* Matching the gray color in the image */
-  text-transform: uppercase; /* As per the image */
+  color: #696868;
+  text-transform: uppercase;
 }
 
 .Guidednest-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 350px; /* Matching Networking's gap */
-  margin-bottom: 20px;
+  gap: 600px; /* Reduced gap for better responsiveness */
+  flex-direction: row;
   flex-wrap: wrap;
-  flex-direction: row; /* Image on left, text on right */
+  padding: 0 20px;
 }
 
 .Guidednest-image-container {
-  background-image: url("./GuideBackground.svg"); /* Background for the image */
+  background-image: url("./GuideBackground.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
   border-radius: 10px;
+  width: 400px;
+  height: 300px; /* Adjusted to match previous components */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Guidednest-image {
-  width: 270px; /* As per the image dimensions */
-  height: 204px; /* As per the image dimensions */
+  width: 270px;
+  height: 204px;
 }
 
 .Guidednest-description {
-  font-size: 18px; /* Matching Networking's description font-size */
-  color: #333; /* Matching Networking's description color */
-  max-width: 400px; /* Matching Networking's description max-width */
-  text-align: left; /* Matching Networking's description text-align */
+  font-size: 18px;
+  color: #333;
+  max-width: 400px;
+  text-align: left;
 }
 
 .Guidednest-footer-text {
-  font-size: 24px; /* Matching Networking's tagline font-size */
-  text-align: start; /* Aligned to the left as per the image */
-  font-weight: bold;
-  color: #333; /* Matching Networking's tagline color */
+  font-size: 24px;
+  text-align: start;
+  margin-left: 9.52%;
   margin-top: 20px;
-  margin-left: 9.52%; /* Matching Networking's tagline margin */
-  margin-bottom: 50px;
-  text-transform: capitalize; /* Matching the image */
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
 }
 
 /* iPad (Tablet) Responsiveness - Screens up to 1024px */
@@ -72,186 +92,122 @@
   }
 
   .Guidednest-title {
-    align-self: flex-start;
-    margin-left: 9.52%;
-    text-align: start;
-    margin-bottom: 40px;
-    font-weight: 900;
-    font-size: 48px; /* Slightly smaller for iPad */
+    font-size: 48px;
     line-height: 58px;
+    margin-left: 7%;
+    margin-bottom: 30px;
   }
 
   .Guidednest-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px; /* Reduce gap for iPad */
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    flex-direction: row; /* Ensure image on left, text on right for iPad */
+    gap: 50px;
+    padding: 0 15px;
   }
 
   .Guidednest-image-container {
     padding: 15px;
     border-radius: 8px;
+    width: 350px;
+    height: 262px; /* Maintain aspect ratio */
   }
 
   .Guidednest-image {
-    width: 230px; /* Slightly smaller for iPad */
+    width: 230px;
     height: 174px; /* Maintain aspect ratio (270:204) */
   }
 
   .Guidednest-description {
-    font-size: 16px; /* Slightly smaller for iPad */
-    max-width: 350px; /* Adjust for iPad */
-    text-align: left;
+    font-size: 16px;
+    max-width: 350px;
   }
 
   .Guidednest-footer-text {
     font-size: 20px;
-    margin-left: 9.52%;
-    text-align: start;
+    margin-left: 7%;
     margin-top: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
-/* Mobile Responsiveness - Screens up to 768px */
-@media (max-width: 768px) {
-  .Guidednest-container {
-    padding: 10px;
-    flex-direction: column; /* Stack elements vertically for better readability */
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .Guidednest-title {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 77px;
-
-    color: #696868;
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    align-self: center;
-  }
-
-  .Guidednest-content {
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 0;
-  }
-
-  .Guidednest-image-container {
-    padding: 10px;
-    border-radius: 6px;
-  }
-
-  .Guidednest-image {
-    width: 200px; /* Smaller for mobile */
-    height: 148px; /* Maintain aspect ratio (270:204) */
-  }
-
-  .Guidednest-description {
-    font-size: 14px;
-    max-width: 90%; /* Fit text to screen */
-    text-align: center;
-  }
-
-  .Guidednest-footer-text {
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-}
-
- 
-
-/* media query to switch the CSS*/
-
-@media screen and (min-width: 768px) {
-  .mobile-Guidednest-container {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
+/* Mobile Responsiveness - Screens up to 767px */
+@media (max-width: 767px) {
   .Guidednest-container {
     display: none !important;
   }
 }
 
-/*  media query for the mobile view */
-
-.Mobile-Guidednest-container {
+/* Mobile Styles */
+.mobile-Guidednest-container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  min-height: 400px;
+  padding: 15px;
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  min-height: auto;
   text-align: center;
   position: relative;
+  animation: fadeIn 1s ease-in-out forwards; /* One-time animation */
+  animation-iteration-count: 1;
 }
 
-.Mobile-Guidednest-title {
-  align-self: center; /* Align to the left */
-  width: 100%;
-  text-align: center;
-  font-family: "Inter"; /* Matching Networking's font */
+.mobile-Guidednest-title {
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 45px; /* Matching EduValt's title size */
-  line-height: 77px;
-  color: #696868; /* Matching the gray color in the image */
-  text-transform: uppercase; /* As per the image */
+  font-size: 36px;
+  line-height: 44px;
+  color: #696868;
+  text-transform: uppercase;
+  margin: 0 auto 20px;
 }
 
-.Mobile-Guidednest-content {
+.mobile-Guidednest-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  flex-direction: column; /* Image on left, text on right */
+  gap: 15px;
+  padding: 0 10px;
 }
 
-.Mobile-Guidednest-image-container {
-  background-image: url("./GuideBackground.svg"); /* Background for the image */
+.mobile-Guidednest-image-container {
+  background-image: url("./GuideBackground.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  width: 300px;
+  height: 225px; /* Maintain aspect ratio */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Mobile-Guidednest-image {
-  width: 270px; /* As per the image dimensions */
-  height: 204px; /* As per the image dimensions */
+.mobile-Guidednest-image {
+  width: 200px;
+  height: 151px; /* Maintain aspect ratio (270:204) */
 }
 
-.Mobile-Guidednest-description {
-  font-size: 18px; /* Matching Networking's description font-size */
-  color: #333; /* Matching Networking's description color */
-  max-width: 400px; /* Matching Networking's description max-width */
-  text-align: center; /* Matching Networking's description text-align */
+.mobile-Guidednest-description {
+  font-size: 16px;
+  color: #333;
+  max-width: 90%;
+  text-align: center;
+  margin: 15px 0;
 }
 
-.Mobile-Guidednest-footer-text {
-  font-size: 24px; /* Matching Networking's tagline font-size */
-  text-align: center; /* Aligned to the left as per the image */
+.mobile-Guidednest-footer-text {
+  font-size: 18px;
   font-weight: bold;
-  color: #333; /* Matching Networking's tagline color */
-  
-  
-  margin-bottom: 50px;
-  text-transform: capitalize; /* Matching the image */
+  color: #333;
+  text-transform: capitalize;
+  margin: 15px 0;
+}
+
+/* Hide mobile container on larger screens */
+@media (min-width: 768px) {
+  .mobile-Guidednest-container {
+    display: none !important;
+  }
 }

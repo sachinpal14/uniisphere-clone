@@ -5,6 +5,10 @@ import Images1 from "./Images1.svg";
 import Images2 from "./Images2.svg";
 import Images3 from "./Images3.svg";
 import Images4 from "./Images4.svg";
+import Himanshu from './Himanshu.svg'
+import Tarun from './Tarun.svg'
+import Ansh from './Ansh.svg'
+import Abhishek from './Abhishek.svg'
 
 function Peoples() {
   const shouldReduceMotion = useReducedMotion();
@@ -60,9 +64,9 @@ function Peoples() {
   const people = [
     {
       name: "Himanshu",
-      role: "Business Manager",
-      details: "Student at Masters Union | Building a Startup | Wants to be a sports person.",
-      image: Images1,
+      role: "Business management",
+      details: "Student at Maters Union  |  Building a Startup  |  Want to be a successful Entrepreneur  |  Have been a sports person.",
+      image: Himanshu,
       colorClass: "color-1",
       alt: "Himanshu profile image",
     },
@@ -70,28 +74,28 @@ function Peoples() {
       name: "Tarun",
       role: "Bachelors in UI/UX",
       details: "Student at University of Delhi | Works at Unisphere | Previously worked in 3 different continents | Teamed up with Actress and Influencers.",
-      image: Images2,
+      image: Tarun,
       colorClass: "color-2",
       alt: "Tarun profile image",
     },
     {
-      name: "Khushboo",
-      role: "MBA",
-      details: "Student at UPES | Works as a Marketing Manager | Wants to be a successful Marketing Expert | Likes to travel a lot.",
-      image: Images3,
+      name: "Ansh",
+      role: "Nautical Science",
+      details: "Student a T.S Rahaman  |  Works at Mol  |  Working as Cadet in Merchant Navy  |  Want to be a successful Navy Captian. ",
+      image: Ansh,
       colorClass: "color-3",
       alt: "Khushboo profile image",
     },
     {
       name: "Abhishek",
-      role: "Marketing",
-      details: "Student at GNOIT | Works at Unisphere | Wants to be a data analyst | Likes to travel.",
-      image: Images1,
+      role: "MBA",
+      details: "Student at UPES  |  Works as Marketing Manager  |  Want ot be a successful Marketing Expert  |  Likes to teravel a lot.",
+      image: Abhishek,
       colorClass: "color-4",
       alt: "Abhishek profile image",
     },
     {
-      name: "Jyoti",
+      name: "Khushboo",
       role: "Computer Science",
       details: "Student at Masters Union | Loves travelling.",
       image: Images4,
@@ -137,6 +141,7 @@ function Peoples() {
         People
       </motion.h2>
       <div className="peoples-container">
+        
         {people.slice(0, 4).map((person, index) => (
           <motion.div
             key={person.name}
@@ -144,13 +149,14 @@ function Peoples() {
             variants={cardVariants}
             custom={index}
           >
+             <h3>"{person.name}"</h3>
             <img
               src={person.image}
               alt={person.alt}
               className="person-image"
               aria-label={person.alt}
             />
-            <h3>{person.name}</h3>
+           
             <p className="role">{person.role}</p>
             <p className="details">{person.details}</p>
           </motion.div>

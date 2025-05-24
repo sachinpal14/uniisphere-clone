@@ -65,7 +65,8 @@ function OurGoal() {
         Our Goal
       </motion.h2>
       <motion.p className="our-goal-description" variants={descriptionVariants}>
-        Uniisphere’s mission is to empower university students by fostering meaningful connections, enhancing academic collaboration, and providing resources for personal and professional growth ensuring opportunities for all, regardless of where they graduated from.
+     Uniisphere’s mission is to empower university students by fostering meaningful connections, enhancing academic collaboration, and providing resources for personal and professional growth ensuring opportunities for all, regardless of where they graduated from.
+
       </motion.p>
     </motion.div>
   );

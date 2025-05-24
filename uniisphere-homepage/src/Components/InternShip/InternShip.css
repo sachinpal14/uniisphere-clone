@@ -1,23 +1,38 @@
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Styles */
 .InternShip-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
- margin: 0 !important;
+  margin: 0;
   width: 100%;
   max-width: 100vw;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   text-align: center;
   position: relative;
+  animation: fadeIn 1s ease-in-out forwards; /* One-time animation */
+  animation-iteration-count: 1;
 }
 
 .InternShip-title {
-  align-self: end; /* Centered as per the image */
-  font-family: "Inter";
+  align-self: flex-end;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
   margin-right: 15%;
-  font-size: 50px; /* Adjusted for the design */
-  line-height: 38px;
+  font-size: 50px;
+  line-height: 60px;
   color: #696868;
   text-transform: uppercase;
 }
@@ -26,39 +41,36 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-direction: row; /* Text on left, image on right */
-  
- 
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
 }
 
 .InternShip-image-container {
   background-image: url("./InternShipBackground.svg");
-  border: none;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
+  width: 400px;
+  height: 309px;
   border-radius: 10px;
-  width: 400px; /* As per the image dimensions */
-  height: 309px; /* As per the image dimensions */
 }
 
 .InternShip-description {
   font-size: 20px;
-  font-weight: 300; /* Adjusted for the smaller text */
-  color: #000000; /* Matching the gray color in the image */
+  font-weight: 300;
+  color: #000000;
   max-width: 450px;
-  text-align: left; /* Align text to the left */
- 
+  text-align: left;
 }
 
 .InternShip-footer-text {
-  font-size: 24px; /* Adjusted for the slogan size */
+  font-size: 24px;
   text-align: end;
   margin-right: 8%;
   font-weight: bold;
   color: #333;
-  text-transform: uppercase; /* Matching the image */
+  text-transform: uppercase;
 }
 
 /* iPad (Tablet) Responsiveness - Screens up to 1024px */
@@ -68,159 +80,103 @@
   }
 
   .InternShip-title {
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 44px;
+    margin-right: 10%;
   }
 
   .InternShip-content {
-    flex-direction: row; /* Maintain row layout for iPad */
-    gap: 20px; /* Reduce gap for smaller screens */
-  }
-
-  .InternShip-image-container {
+    flex-direction: row;
+    gap: 15px;
     padding: 15px;
-    border-radius: 8px;
-    width: 450px; /* Scaled down proportionally */
-    height: 253px; /* Maintain aspect ratio (550:309) */
-  }
-
-  .InternShip-description {
-    font-size: 13px;
-    max-width: 350px; /* Adjust for smaller screen */
-  }
-
-  .InternShip-footer-text {
-    font-size: 16px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-  }
-}
-
-/* Mobile Responsiveness - Screens up to 768px */
-@media (max-width: 768px) {
-  .InternShip-container {
-    padding: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    min-height: auto;
-  }
-
-  .InternShip-title {
-    font-size: 24px;
-    line-height: 29px;
-    margin-bottom: 10px;
-  }
-
-  .InternShip-content {
-    flex-direction: column; /* Stack vertically on mobile */
-    align-items: center;
-    gap: 15px;
   }
 
   .InternShip-image-container {
-    padding: 10px;
-    border-radius: 6px;
-    width: 350px; /* Scaled down for mobile */
-    height: 197px; /* Maintain aspect ratio (550:309) */
+    width: 350px;
+    height: 270px; /* Maintain aspect ratio */
   }
 
   .InternShip-description {
-    font-size: 12px;
-    max-width: 90%;
-    text-align: center; /* Center text on mobile */
+    font-size: 16px;
+    max-width: 400px;
   }
 
   .InternShip-footer-text {
-    font-size: 14px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-right: 5%;
   }
 }
 
-
-
-
-
-@media screen and (min-width: 768px) {
-  .mobile-InternShip-container {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
+/* Mobile Responsiveness - Screens up to 767px */
+@media (max-width: 767px) {
   .InternShip-container {
     display: none !important;
   }
 }
 
-
-
-
+/* Mobile Styles */
 .mobile-InternShip-container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   max-width: 100vw;
-  min-height: 400px;
+  min-height: auto;
   text-align: center;
   position: relative;
+  animation: fadeIn 1s ease-in-out forwards; /* One-time animation */
+  animation-iteration-count: 1;
 }
 
 .mobile-InternShip-title {
-  align-self: center; /* Centered as per the image */
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
-  margin-right: 15%;
-  font-size: 45px; /* Adjusted for the design */
-  line-height: 38px;
+  font-size: 32px;
+  line-height: 40px;
   color: #696868;
   text-transform: uppercase;
+  margin: 0 auto 15px;
 }
 
 .mobile-InternShip-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  justify-content: space-around;
-  flex-direction: column; /* Text on left, image on right */
-  
- 
+  gap: 15px;
+  padding: 10px;
 }
 
 .mobile-InternShip-image-container {
   background-image: url("./InternShipBackground.svg");
-  border: none;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px; /* As per the image dimensions */
-  height: 309px; /* As per the image dimensions */
+  width: 300px;
+  height: 232px; /* Maintain aspect ratio */
+  border-radius: 8px;
 }
 
 .mobile-InternShip-description {
-  font-size: 20px;
-  margin-bottom:30px;
-  font-weight: 300; /* Adjusted for the smaller text */
-  color: #000000; /* Matching the gray color in the image */
-  max-width: 450px;
-  text-align: center; /* Align text to the left */
- 
+  font-size: 16px;
+  font-weight: 300;
+  color: #000000;
+  max-width: 90%;
+  text-align: center;
+  margin: 15px 0;
 }
 
 .mobile-InternShip-footer-text {
-  font-size: 24px; /* Adjusted for the slogan size */
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #333;
-  text-transform: uppercase; /* Matching the image */
+  text-transform: uppercase;
+  margin: 15px 0;
 }
 
- 
+/* Hide mobile container on larger screens */
+@media (min-width: 768px) {
+  .mobile-InternShip-container {
+    display: none !important;
+  }
+}

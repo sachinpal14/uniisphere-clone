@@ -7,11 +7,11 @@
 }
 
 .People-heading {
- font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 48px;
-margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 40px;
 }
 
 .peoples-container {
@@ -26,22 +26,47 @@ margin-bottom: 40px;
 
 .person-card {
   border-radius: 10px;
-  padding: 10px;
-  width: 22%;
+  padding: 20px;
+  width: 25%;
   text-align: center;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
   position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border-radius: 30px;
 }
 
 /* Unique colors for each card */
-.color-1 { background-color: #f5e7e7; }
-.color-2 { background-color: #e7f5e7; }
-.color-3 { background-color: #e7e7f5; }
-.color-4 { background-color: #f5f5e7; }
-.color-5 { background-color: #f5e7f5; }
-.color-6 { background-color: #e7f5f5; }
-.color-7 { background-color: #f5f5e7; }
-.color-8 { background-color: #e7e7f5; }
+.color-1 {
+  background: linear-gradient(180deg, rgba(187, 214, 216, 0.4) 0%, rgba(3, 3, 3, 0.1) 100%);
+}
+.color-2 {
+  background: linear-gradient(180deg, #dba2a0 0%, #e0e0e0 80%);
+  opacity: 0.25;
+}
+.color-3 {
+ background: linear-gradient(180deg, rgba(221, 192, 88, 0.2) 0%, rgba(91, 82, 82, 0.1) 100%);
+}
+.color-4 {
+ 
+background: linear-gradient(180deg, rgba(19, 145, 255, 0.2) 0%, rgba(3, 3, 3, 0.1) 100%);
+}
+.color-5 {
+  background-color: #f5e7f5;
+}
+.color-6 {
+  background-color: #e7f5f5;
+}
+.color-7 {
+  background-color: #f5f5e7;
+}
+.color-8 {
+  background-color: #e7e7f5;
+}
 
 .person-image {
   width: 80px;
@@ -96,9 +121,15 @@ margin-bottom: 40px;
     height: 70px;
   }
 
-  .person-card h3 { font-size: 18px; }
-  .person-card .role { font-size: 14px; }
-  .person-card .details { font-size: 13px; }
+  .person-card h3 {
+    font-size: 18px;
+  }
+  .person-card .role {
+    font-size: 14px;
+  }
+  .person-card .details {
+    font-size: 13px;
+  }
 }
 
 /* Mobile */
@@ -123,9 +154,15 @@ margin-bottom: 40px;
     height: 60px;
   }
 
-  .person-card h3 { font-size: 16px; }
-  .person-card .role { font-size: 13px; }
-  .person-card .details { font-size: 12px; }
+  .person-card h3 {
+    font-size: 16px;
+  }
+  .person-card .role {
+    font-size: 13px;
+  }
+  .person-card .details {
+    font-size: 12px;
+  }
 }
 
 /* Small mobile */
@@ -153,7 +190,13 @@ margin-bottom: 40px;
     height: 50px;
   }
 
-  .person-card h3 { font-size: 14px; }
-  .person-card .role { font-size: 12px; }
-  .person-card .details { font-size: 11px; }
+  .person-card h3 {
+    font-size: 14px;
+  }
+  .person-card .role {
+    font-size: 12px;
+  }
+  .person-card .details {
+    font-size: 11px;
+  }
 }

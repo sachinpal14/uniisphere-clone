@@ -1,67 +1,73 @@
+/* Desktop Styles */
 .EduValt-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  /* min-height: 100vh; */
   text-align: center;
   position: relative;
 }
 
 .EduValt-title {
-  align-self: flex-end; /* Align to the right */
-  margin-right: 9.52%; /* Matching Networking's margin */
-  margin-bottom: 50px;
-  font-family: "Inter"; /* Matching Networking's font */
+  align-self: flex-end;
+  margin-right: 9.52%;
+  margin-bottom: 40px;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 64px; /* Matching the large size in the image */
+  font-size: 64px;
   line-height: 77px;
-  color: #696868; /* Matching the gray color in the image */
-  text-transform: uppercase; /* As per the image */
+  color: #696868;
+  text-transform: uppercase;
 }
 
 .EduValt-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 350px; /* Matching Networking's gap */
-  margin-bottom: 20px;
+  gap: 600px; /* Reduced gap for better responsiveness */
+  flex-direction: row;
   flex-wrap: wrap;
-  flex-direction: row; /* Text on left, image on right */
+  padding: 0 20px;
 }
 
 .EduValt-image-container {
-  background-image: url("./EduBackground.svg"); /* Assuming a background like Networking */
+  background-image: url("./EduBackground.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
   border-radius: 10px;
+  width: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .EduValt-image {
-  width: 300px; /* Matching Networking's image width */
+  width: 300px;
   height: auto;
 }
 
 .EduValt-text-and-tag-container {
-  font-size: 18px; /* Matching Networking's description font-size */
-  color: #333; /* Matching Networking's description color */
-  max-width: 400px; /* Matching Networking's description max-width */
-  text-align: left; /* Matching Networking's description text-align */
+  font-size: 18px;
+  color: #333;
+  max-width: 400px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjusted for tags */
+  gap: 20px;
 }
 
 .EduValt-tag-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
-  gap: 10px; /* Gap between tags, matching the image */
-  max-width: 450px; /* Ensure the grid fits two tags per line */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 450px;
 }
 
 .EduValt-each-tag {
@@ -76,7 +82,6 @@
   text-align: center;
 }
 
-/* Specific background colors for each tag as per the image */
 .EduValt-each-tag:nth-child(1) {
   background-color: #FFD7D7; /* Light pink for E-Books */
 }
@@ -93,21 +98,21 @@
   background-color: #D4F5EF; /* Light teal for Novels */
 }
 
-.Eduvalt-tag-text {
+.EduValt-tag-text {
   font-size: 16px;
   font-weight: 500;
-  text-transform: capitalize; /* Match the image's capitalization */
+  text-transform: capitalize;
 }
 
 .EduValt-footer-text {
-  font-size: 24px; /* Matching Networking's tagline font-size */
-  text-align: end; /* Adjusted to end as per the image */
-  font-weight: bold;
-  color: #333; /* Matching Networking's tagline color */
-  margin-top: 20px;
+  font-size: 24px;
+  text-align: end;
   margin-right: 13%;
-  margin-bottom: 50px;
-  text-transform: capitalize; /* Matching the image */
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
 }
 
 /* iPad (Tablet) Responsiveness - Screens up to 1024px */
@@ -117,38 +122,31 @@
   }
 
   .EduValt-title {
-    align-self: flex-end;
-    margin-right: 9.52%;
-    text-align: start;
-    margin-bottom: 40px;
-    font-weight: 900;
-    font-size: 48px; /* Slightly smaller for iPad */
+    font-size: 48px;
     line-height: 58px;
+    margin-right: 7%;
+    margin-bottom: 30px;
   }
 
   .EduValt-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px; /* Reduce gap for iPad */
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    flex-direction: row; /* Ensure text on left, image on right for iPad */
+    gap: 50px;
+    padding: 0 15px;
   }
 
   .EduValt-image-container {
     padding: 15px;
     border-radius: 8px;
+    width: 350px;
+    height: 262px; /* Maintain aspect ratio */
   }
 
   .EduValt-image {
-    width: 250px; /* Slightly smaller for iPad */
+    width: 250px;
   }
 
   .EduValt-text-and-tag-container {
-    font-size: 16px; /* Slightly smaller for iPad */
-    max-width: 350px; /* Adjust for iPad */
-    text-align: left;
+    font-size: 16px;
+    max-width: 350px;
     gap: 15px;
   }
 
@@ -163,219 +161,147 @@
     border-radius: 10px;
   }
 
-  .Eduvalt-tag-text {
+  .EduValt-tag-text {
     font-size: 14px;
   }
 
   .EduValt-footer-text {
     font-size: 20px;
-    margin-right: 9.52%;
-    text-align: end;
+    margin-right: 7%;
     margin-top: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
-/* Mobile Responsiveness - Screens up to 768px */
-@media (max-width: 768px) {
-  .EduValt-container {
-    padding: 10px;
-    flex-direction: column; /* Stack elements vertically for better readability */
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    min-height: auto;
-  }
-
-  .EduValt-title {
-    font-size: 36px;
-    line-height: 44px;
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    align-self: center;
-  }
-
-  .EduValt-content {
-    flex-direction: column; /* Stack text and image vertically */
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 0;
-  }
-
-  .EduValt-image-container {
-    padding: 10px;
-    border-radius: 6px;
-  }
-
-  .EduValt-image {
-    width: 200px; /* Smaller for mobile */
-  }
-
-  .EduValt-text-and-tag-container {
-    font-size: 14px;
-    max-width: 90%; /* Fit text to screen */
-    text-align: center;
-    gap: 10px;
-  }
-
-  .EduValt-tag-container {
-    display: grid; /* Keep grid layout on mobile */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-    max-width: 300px;
-  }
-
-  .EduValt-each-tag {
-    width: 100px;
-    height: 32px;
-    border-radius: 8px;
-  }
-
-  .Eduvalt-tag-text {
-    font-size: 12px;
-  }
-
-  .EduValt-footer-text {
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-}
-
- /*  CSS  for the  switch the desktop and the mobile view */  
-
- @media screen and (min-width: 768px) {
-  .mobile-EduValt-container {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
+/* Mobile Responsiveness - Screens up to 767px */
+@media (max-width: 767px) {
   .EduValt-container {
     display: none !important;
   }
 }
 
-
-
-/* Mobie view */ 
-
-.Mobile-EduValt-container {
+/* Mobile Styles */
+.mobile-EduValt-container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  min-height: 400px;
+  padding: 15px;
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+  min-height: auto;
   text-align: center;
   position: relative;
 }
 
-.Mobile-EduValt-title {
-  align-self: center; /* Align to the right */
-      font-family: "Inter"; /* Matching Networking's font */
+.mobile-EduValt-title {
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 45px; /* Matching the large size in the image */
-  line-height: 77px;
-  color: #696868; /* Matching the gray color in the image */
-  text-transform: uppercase; /* As per the image */
+  font-size: 36px;
+  line-height: 44px;
+  color: #696868;
+  text-transform: uppercase;
+  margin: 0 auto 20px;
 }
 
-.Mobile-EduValt-content {
+.mobile-EduValt-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
- gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  flex-direction: row; /* Text on left, image on right */
+  gap: 15px;
+  padding: 0 10px;
 }
 
-.Mobile-EduValt-image-container {
-  background-image: url("./EduBackground.svg"); /* Assuming a background like Networking */
+.mobile-EduValt-image-container {
+  background-image: url("./EduBackground.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  width: 300px;
+  height: 225px; /* Maintain aspect ratio */
   display: flex;
-  width: 400px;
-  height: 300px;
   justify-content: center;
   align-items: center;
 }
 
-.Mobile-EduValt-image {
-  width: 300px; /* Matching Networking's image width */
+.mobile-EduValt-image {
+  width: 200px;
   height: auto;
 }
 
-.Mobile-EduValt-text-and-tag-container {
-  font-size: 18px; /* Matching Networking's description font-size */
-  color: #333; /* Matching Networking's description color */
-  max-width: 400px; /* Matching Networking's description max-width */
-  text-align: left; /* Matching Networking's description text-align */
+.mobile-EduValt-text-and-tag-container {
+  font-size: 16px;
+  color: #333;
+  max-width: 90%;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjusted for tags */
+  gap: 15px;
 }
 
-.Mobile-EduValt-tag-container {
+.mobile-EduValt-tag-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
-  gap: 10px; /* Gap between tags, matching the image */
-  max-width: 450px; /* Ensure the grid fits two tags per line */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  max-width: 300px;
 }
 
-.Mobile-EduValt-each-tag {
+.mobile-EduValt-each-tag {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 130px;
-  height: 40px;
+  width: 100px;
+  height: 32px;
   background: rgba(220, 37, 31, 0.2);
   box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
+  border-radius: 8px;
   text-align: center;
 }
 
-/* Specific background colors for each tag as per the image */
-.Mobile-EduValt-each-tag:nth-child(1) {
-  background-color: #FFD7D7; /* Light pink for E-Books */
+.mobile-EduValt-each-tag:nth-child(1) {
+  background-color: #FFD7D7;
 }
 
-.Mobile-EduValt-each-tag:nth-child(2) {
-  background-color: #E5E2FF; /* Light purple for Notes */
+.mobile-EduValt-each-tag:nth-child(2) {
+  background-color: #E5E2FF;
 }
 
-.Mobile-EduValt-each-tag:nth-child(3) {
-  background-color: #80898E33; /* Light gray for References */
+.mobile-EduValt-each-tag:nth-child(3) {
+  background-color: #80898E33;
 }
 
-.Mobile-EduValt-each-tag:nth-child(4) {
-  background-color: #D4F5EF; /* Light teal for Novels */
+.mobile-EduValt-each-tag:nth-child(4) {
+  background-color: #D4F5EF;
 }
 
-.Mobile-Eduvalt-tag-text {
-  font-size: 16px;
+.mobile-EduValt-tag-text {
+  font-size: 12px;
   font-weight: 500;
-  text-transform: capitalize; /* Match the image's capitalization */
+  text-transform: capitalize;
 }
 
-.Mobile-EduValt-footer-text {
-  font-size: 24px; /* Matching Networking's tagline font-size */
-  text-align: end; /* Adjusted to end as per the image */
-  font-weight: bold;
-  color: #333; /* Matching Networking's tagline color */
-  margin-top: 20px;
-   text-transform: capitalize; /* Matching the image */
-}
-
-.mobile-eduvalt-text-description{
+.mobile-EduValt-footer-text {
   font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+  margin: 15px 0;
+}
+
+.mobile-EduValt-text-description {
+  font-size: 16px;
+  color: #333;
+  max-width: 90%;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 15px 0;
+}
+
+/* Hide mobile container on larger screens */
+@media (min-width: 768px) {
+  .mobile-EduValt-container {
+    display: none !important;
+  }
 }

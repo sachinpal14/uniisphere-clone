@@ -1,22 +1,14 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import "./HumanLibrary.css";
 import Image from "./image.svg";
 
-
 function HumanLibrary() {
   const shouldReduceMotion = useReducedMotion();
-  const [isDesktop, setIsDesktop] = useState(true);
-  const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { amount: 0.3, once: false });
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 769px)");
-    setIsDesktop(mediaQuery.matches);
-    const handleResize = () => setIsDesktop(mediaQuery.matches);
-    mediaQuery.addEventListener("change", handleResize);
-    return () => mediaQuery.removeEventListener("change", handleResize);
-  }, []);
+  const contentRefDesktop = useRef(null);
+  const contentRefMobile = useRef(null);
+  const isInViewDesktop = useInView(contentRefDesktop, { amount: 0.3, once: true });
+  const isInViewMobile = useInView(contentRefMobile, { amount: 0.3, once: true });
 
   // Animation variants
   const containerVariants = {
@@ -78,65 +70,58 @@ function HumanLibrary() {
   };
 
   return (
-
-    <>   
-    
-    <motion.div
-      className="human-library-container"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
-      aria-label="Human Library Section"
-    >
-      <motion.div className="human-library-title" variants={titleVariants}>
-        HUMAN LIBRARY
-      </motion.div>
-      <div className="human-library-content" ref={contentRef}>
-        <div className="human-library-image-container">
-          
-        </div>
-        <motion.div className="human-library-text" variants={textVariants}>
-          Uniisphere provides access to caring psychiatrists so students can speak freely and feel truly heard.
-
+    <>
+      <motion.div
+        className="human-library-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInViewDesktop && !shouldReduceMotion ? "visible" : "hidden"}
+        aria-label="Human Library Section"
+      >
+        <motion.div className="human-library-title" variants={titleVariants}>
+          HUMAN LIBRARY
         </motion.div>
-      </div>
-      <motion.div className="human-library-footer" variants={footerVariants}>
-        A Community That Cares About What <br /> You Feel and Who You Are
-      </motion.div>
-    </motion.div>
-    
-
-
-
-    
-    <motion.div
-      className="mobile-human-library-container"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
-      aria-label="Human Library Section"
-    >
-      <motion.div className="mobile-human-library-title" variants={titleVariants}>
-        HUMAN LIBRARY
-      </motion.div>
-      <div className="mobile-human-library-content" ref={contentRef}>
-        <div className="mobile-human-library-image-container">
-          
+        <div className="human-library-content" ref={contentRefDesktop}>
+          <motion.div className="human-library-image-container" variants={imageVariants}>
+           
+          </motion.div>
+          <motion.div className="human-library-text" variants={textVariants}>
+            Uniisphere provides access to caring psychiatrists so students can speak freely and feel truly heard.
+          </motion.div>
         </div>
-
-
-         <motion.div className="mobile-human-library-footer" variants={footerVariants}>
-        A Community That Cares About What <br /> You Feel and Who You Are
+        <motion.div className="human-library-footer" variants={footerVariants}>
+          A Community That Cares About What <br /> You Feel and Who You Are
+        </motion.div>
       </motion.div>
 
-      
+      <motion.div
+        className="mobile-human-library-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInViewMobile && !shouldReduceMotion ? "visible" : "hidden"}
+        aria-label="Human Library Section"
+      >
+        <motion.div className="mobile-human-library-title" variants={titleVariants}>
+          HUMAN LIBRARY
+        </motion.div>
+        <div className="mobile-human-library-content" ref={contentRefMobile}>
+          <motion.div className="mobile-human-library-image-container" variants={imageVariants}>
+            <motion.img
+              className="mobile-human-library-image"
+              src={Image}
+              alt="Human Library feature illustration"
+              variants={imageVariants}
+              aria-label="Human Library feature illustration"
+            />
+          </motion.div>
+          <motion.div className="mobile-human-library-footer" variants={footerVariants}>
+            A Community That Cares About What <br /> You Feel and Who You Are
+          </motion.div>
+        </div>
         <motion.div className="mobile-human-library-text" variants={textVariants}>
           Uniisphere provides access to caring psychiatrists so students can speak freely and feel truly heard.
-
         </motion.div>
-      </div>
-     
-    </motion.div>
+      </motion.div>
     </>
   );
 }

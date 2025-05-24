@@ -1,16 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import "./EduValt.css";
-import tagImage from "./tagimage.svg";
-import Images from "./image.svg";
-import { image } from "framer-motion/client";
 import Edu from "./Edu.svg";
 
 function EduValt() {
   const shouldReduceMotion = useReducedMotion();
   const [isDesktop, setIsDesktop] = useState(true);
   const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { amount: 0.3, once: false });
+  const isInView = useInView(contentRef, { amount: 0.3, once: true }); // Animation runs only once
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 769px)");
@@ -105,7 +102,7 @@ function EduValt() {
         variants={containerVariants}
         initial="hidden"
         animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
-        aria-label="Edu Valt Section"
+        aria-label="Edu Vault Section"
       >
         <motion.div className="EduValt-title" variants={titleVariants}>
           Edu Vault
@@ -115,8 +112,8 @@ function EduValt() {
             className="EduValt-text-and-tag-container"
             variants={textVariants}
           >
-            Uniisphere gives students easy access to E-Books, Notes and other
-            resources at very minimal cost - all in one place.
+            Unisphere gives students easy access to e-books, notes, and other
+            resources at a minimal cost — all in one place.
             <div className="EduValt-tag-container">
               {tags.map((tag, index) => (
                 <motion.div
@@ -125,7 +122,7 @@ function EduValt() {
                   variants={tagVariants}
                   custom={index}
                 >
-                  <span className="Eduvalt-tag-text">{tag.text}</span>
+                  <span className="EduValt-tag-text">{tag.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -133,77 +130,69 @@ function EduValt() {
           <div className="EduValt-image-container">
             <motion.img
               className="EduValt-image"
-              src={Edu} // Replace with actual image.svg
-              alt="Edu Valt feature"
+              src={Edu}
+              alt="Edu Vault feature"
               variants={imageVariants}
-              aria-label="Edu Valt feature illustration"
+              aria-label="Edu Vault feature illustration"
             />
           </div>
         </div>
-
         <motion.div className="EduValt-footer-text" variants={footerVariants}>
           Your Path to Smarter Learning
         </motion.div>
       </motion.div>
 
-
-
-
-
       <motion.div
-        className="Mobile-EduValt-container"
+        className="mobile-EduValt-container"
         variants={containerVariants}
         initial="hidden"
         animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
-        aria-label="Edu Valt Section"
+        aria-label="Edu Vault Mobile Section"
       >
-        <motion.div className="Mobile-EduValt-title" variants={titleVariants}>
+        <motion.div className="mobile-EduValt-title" variants={titleVariants}>
           Edu Vault
         </motion.div>
-        <div className="Mobile-EduValt-content" ref={contentRef}>
+        <div className="mobile-EduValt-content" ref={contentRef}>
+          <div className="mobile-EduValt-image-container">
+            <motion.img
+              className="mobile-EduValt-image"
+              src={Edu}
+              alt="Edu Vault feature"
+              variants={imageVariants}
+              aria-label="Edu Vault feature illustration"
+            />
+          </div>
           <motion.div
-            className="Mobile-EduValt-text-and-tag-container"
+            className="mobile-EduValt-text-and-tag-container"
             variants={textVariants}
           >
-          
-
-            <div className="Mobile-EduValt-tag-container">
+            <div className="mobile-EduValt-tag-container">
               {tags.map((tag, index) => (
                 <motion.div
                   key={tag.text}
-                  className="Mobile-EduValt-each-tag"
+                  className="mobile-EduValt-each-tag"
                   variants={tagVariants}
                   custom={index}
                 >
-                  <span className="Mobile-Eduvalt-tag-text">{tag.text}</span>
+                  <span className="mobile-EduValt-tag-text">{tag.text}</span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-          <div className="Mobile-EduValt-image-container">
-            <motion.img
-              className="Mobile-EduValt-image"
-              src={Edu} // Replace with actual image.svg
-              alt="Edu Valt feature"
-              variants={imageVariants}
-              aria-label="Edu Valt feature illustration"
-            />
-          </div>
-
-
-            <motion.div
-              className="Mobile-EduValt-footer-text"
-              variants={footerVariants}
-            >
-              Your Path to Smarter Learning
-            </motion.div>
+          <motion.div
+            className="mobile-EduValt-footer-text"
+            variants={footerVariants}
+          >
+            Your Path to Smarter Learning
+          </motion.div>
+          <motion.p
+            className="mobile-EduValt-text-description"
+            variants={textVariants}
+          >
+            Unisphere gives students easy access to e-books, notes, and other
+            resources at a minimal cost — all in one place.
+          </motion.p>
         </div>
-        <motion.p  
-         className="mobile-eduvalt-text-description">
-          {" "}
-          Uniisphere gives students easy access to E-Books, Notes and other
-          resources at very minimal cost - all in one place.
-        </motion.p>
       </motion.div>
     </>
   );

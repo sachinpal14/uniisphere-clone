@@ -2,12 +2,13 @@ import React, { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import "./Blog.css";
 import BlogImage from './image.svg';
-// import InternShipBackground from './InternShipBackground.svg'; // Import the second image
 
 const Blog = () => {
   const shouldReduceMotion = useReducedMotion();
-  const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { amount: 0.3, once: false });
+  const contentRefDesktop = useRef(null);
+  const contentRefMobile = useRef(null);
+  const isInViewDesktop = useInView(contentRefDesktop, { amount: 0.3, once: true });
+  const isInViewMobile = useInView(contentRefMobile, { amount: 0.3, once: true });
 
   // Animation variants
   const containerVariants = {
@@ -69,75 +70,65 @@ const Blog = () => {
   };
 
   return (
-
-<>   
-
-    <motion.div
-      className="uni-blog-container"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
-      aria-label="Blog Section"
-    >
-      <motion.div className="uni-blog-title" variants={titleVariants}>
-        V-Blogs
+    <>
+      <motion.div
+        className="uni-blog-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInViewDesktop && !shouldReduceMotion ? "visible" : "hidden"}
+        aria-label="Blog Section"
+      >
+        <motion.div className="uni-blog-title" variants={titleVariants}>
+          V-Blogs
+        </motion.div>
+        <div className="uni-blog-content" ref={contentRefDesktop}>
+          <motion.div className="uni-blog-text" variants={textVariants}>
+            A Space for students to freely share their stories and personal experiences through long form videos and written content.
+          </motion.div>
+          <motion.div className="uni-blog-image-container" variants={imageVariants}>
+            <motion.img
+              className="uni-blog-image"
+              src={BlogImage}
+              alt="Blog feature illustration"
+              variants={imageVariants}
+              aria-label="Blog feature illustration"
+            />
+          </motion.div>
+        </div>
+        <motion.div className="uni-blog-footer" variants={footerVariants}>
+          Building a Better Tomorrow by Supporting Communities Today
+        </motion.div>
       </motion.div>
-      <div className="uni-blog-content" ref={contentRef}>
-        <motion.div className="uni-blog-text" variants={textVariants}>
+
+      <motion.div
+        className="mobile-uni-blog-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInViewMobile && !shouldReduceMotion ? "visible" : "hidden"}
+        aria-label="Blog Section"
+      >
+        <motion.div className="mobile-uni-blog-title" variants={titleVariants}>
+          V-Blogs
+        </motion.div>
+        <div className="mobile-uni-blog-content" ref={contentRefMobile}>
+          <motion.div className="mobile-uni-blog-image-container" variants={imageVariants}>
+            <motion.img
+              className="mobile-uni-blog-image"
+              src={BlogImage}
+              alt="Blog feature illustration"
+              variants={imageVariants}
+              aria-label="Blog feature illustration"
+            />
+          </motion.div>
+          <motion.div className="mobile-uni-blog-footer" variants={footerVariants}>
+            Building a Better Tomorrow by Supporting Communities Today
+          </motion.div>
+        </div>
+        <motion.div className="mobile-uni-blog-text" variants={textVariants}>
           A Space for students to freely share their stories and personal experiences through long form videos and written content.
         </motion.div>
-        <motion.div className="uni-blog-image-container" variants={imageVariants}>
-          <motion.img
-            className="uni-blog-image"
-            src={BlogImage} // Foreground image
-            alt="Blog feature illustration"
-            variants={imageVariants}
-            aria-label="Blog feature illustration"
-          />
-        </motion.div>
-      </div>
-      <motion.div className="uni-blog-footer" variants={footerVariants}>
-        Building a Better Tomorrow by Supporting Communities Today
       </motion.div>
-    </motion.div>
-
-
-
-
-    <motion.div
-      className="mobile-uni-blog-container"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
-      aria-label="Blog Section"
-    >
-      <motion.div className="mobile-uni-blog-title" variants={titleVariants}>
-        V-Blogs
-      </motion.div>
-      <div className="mobile-uni-blog-content" ref={contentRef}>
-       
-        <motion.div className="mobile-uni-blog-image-container" variants={imageVariants}>
-          <motion.img
-            className="mobile-uni-blog-image"
-            src={BlogImage} // Foreground image
-            alt="Blog feature illustration"
-            variants={imageVariants}
-            aria-label="Blog feature illustration"
-          />
-        </motion.div>
-      </div>
-
-       <motion.div className="mobile-uni-blog-footer" variants={footerVariants}>
-        Building a Better Tomorrow by Supporting Communities Today
-      </motion.div>
-
-       <motion.div className="mobile-uni-blog-text" variants={textVariants}>
-          A Space for students to freely share their stories and personal experiences through long form videos and written content.
-        </motion.div>
-     
-    </motion.div>
-</>
-
+    </>
   );
 };
 

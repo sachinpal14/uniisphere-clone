@@ -3,7 +3,7 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import Unispherelogo from './Unispherelogo.png';
+import Unispherelogo from "./Unispherelogo.png";
 
 function Footer() {
   const shouldReduceMotion = useReducedMotion();
@@ -91,83 +91,84 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <motion.div
-        className="footer-content"
-        ref={contentRef}
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
-      >
-        {/* Left Section */}
-        <motion.div className="footer-left">
-         
-          <h1 className="footer-title">
-             <motion.img
-            src={Unispherelogo}
-            alt="Unisphere Logo"
-            className="footer-logo"
-            variants={logoVariants}
-          />
-            {letters.map((letter, i) => (
-              <motion.span
-                key={i}
-                className={letterClasses[i]}
-                custom={i}
-                variants={letterVariants}
+      <div>
+        <motion.div
+          className="footer-content"
+          ref={contentRef}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
+        >
+          {/* Left Section */}
+          <motion.div className="footer-left">
+            <h1 className="footer-title">
+              <motion.img
+                src={Unispherelogo}
+                alt="Unisphere Logo"
+                className="footer-logo"
+                variants={logoVariants}
+              />
+              {letters.map((letter, i) => (
+                <motion.span
+                  key={i}
+                  className={letterClasses[i]}
+                  custom={i}
+                  variants={letterVariants}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </h1>
+            <motion.p className="footer-tagline" variants={taglineVariants}>
+              {/* Fostering Connections, Fueling Success */}
+            </motion.p>
+            <div className="social-links">
+              <motion.a
+                href="https://www.instagram.com/uniisphere.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon instagram"
+                aria-label="Follow us on Instagram"
+                variants={linkVariants}
+                custom={0}
               >
-                {letter}
-              </motion.span>
-            ))}
-          </h1>
-          <motion.p className="footer-tagline" variants={taglineVariants}>
-            Fostering Connections, 
-            Fueling Success
-          </motion.p>
-          <div className="social-links">
-            <motion.a
-              href="https://www.instagram.com/uniisphere.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon instagram"
-              aria-label="Follow us on Instagram"
-              variants={linkVariants}
-              custom={0}
-            >
-              <FaInstagram />
-              Instagram
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/company/uniisphereapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon linkedin"
-              aria-label="Connect with us on LinkedIn"
-              variants={linkVariants}
-              custom={1}
-            >
-              <FaLinkedin />
-              LinkedIn
-            </motion.a>
-          </div>
-        </motion.div>
+                <FaInstagram />
+                Instagram
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/company/uniisphereapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon linkedin"
+                aria-label="Connect with us on LinkedIn"
+                variants={linkVariants}
+                custom={1}
+              >
+                <FaLinkedin />
+                LinkedIn
+              </motion.a>
+            </div>
+          </motion.div>
 
-        {/* Right Section */}
-        <motion.div className="footer-right">
-          <ul className="footer-links">
-            {[
-              { to: "/about", text: "About" },
-              { to: "/privacy-policy", text: "Privacy Policy" },
-              { to: "/cookie-policy", text: "Cookie Policy" },
-              { to: "/user-agreement", text: "User Agreement" },
-              { to: "/community-guidelines", text: "Community Guidelines" },
-            ].map((link, i) => (
-              <motion.li key={link.to} variants={linkVariants} custom={i}>
-                <Link to={link.to}>{link.text}</Link>
-              </motion.li>
-            ))}
-          </ul>
+          {/* Right Section */}
+          <motion.div className="footer-right">
+            <ul className="footer-links">
+              {[
+                { to: "/about", text: "About" },
+                { to: "/privacy-policy", text: "Privacy Policy" },
+                { to: "/cookie-policy", text: "Cookie Policy" },
+                { to: "/user-agreement", text: "User Agreement" },
+                { to: "/community-guidelines", text: "Community Guidelines" },
+              ].map((link, i) => (
+                <motion.li key={link.to} variants={linkVariants} custom={i}>
+                  <Link to={link.to}>{link.text}</Link>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
         </motion.div>
-      </motion.div>
+        <p className="Footer-desc">A Platform For Students “By students”</p>
+      </div>
     </footer>
   );
 }

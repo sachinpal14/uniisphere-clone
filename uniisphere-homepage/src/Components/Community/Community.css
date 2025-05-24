@@ -1,3 +1,4 @@
+/* Desktop Styles */
 .uni-community-container {
   display: flex;
   flex-direction: column;
@@ -6,14 +7,15 @@
   margin: auto;
   max-width: 100vw;
   padding-top: 10px;
-    min-height: 100vh;
+  /* min-height: 100vh; */
+  margin-bottom: 50px;
 }
 
 .uni-community-title {
   font-size: 50px; /* Matches InternShip's title size */
   font-weight: 900; /* Matches InternShip */
   color: #696868;
-  width:75%;
+  width: 75%;
   text-align: start;
   letter-spacing: -0.5px;
   font-family: "Inter"; /* Matches InternShip */
@@ -25,25 +27,22 @@
 .uni-community-content {
   display: flex;
   padding: 10px;
-  flex-direction: row-reverse; /* Text on left, image on right to match InternShip */
+  flex-direction: row-reverse; 
   align-items: center;
   width: 100%;
   justify-content: space-around;
- 
-   
 }
 
 .uni-community-image-container {
-  width:400px; /* Matches InternShip's dimensions */
-  background-image: url("./communitybg.svg"); 
-  /* background-color: navy; */
+  width: 400px; /* Matches InternShip's dimensions */
+  background-image: url("./communitybg.svg");
   background-repeat: no-repeat;
   background-size: contain; /* Matches InternShip */
   display: flex;
   height: 300px;
   justify-content: center;
   align-items: center;
-  padding: 20px; 
+  padding: 20px;
   border-radius: 10px; /* Matches InternShip */
 }
 
@@ -67,17 +66,16 @@
   font-size: 24px; /* Matches InternShip's footer size */
   font-weight: 700;
   display: flex;
-  margin-left:170px;
-  align-self: flex-start;
+  align-self: flex-start; /* Adjusted for centering */
   color: #000; /* Matches InternShip's footer color */
-  width: 30%; /* Matches InternShip's centered layout */
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-align: center; /* Matches InternShip */
+  margin-left: 13%;
+  /* width: 100%;  */
+
+  text-align: start; /* Matches InternShip */
   text-transform: uppercase; /* Matches InternShip */
 }
 
-/* Tablet */
+/* Tablet Styles */
 @media (max-width: 1024px) {
   .uni-community-container {
     padding-top: 15px; /* Matches InternShip */
@@ -92,12 +90,12 @@
 
   .uni-community-content {
     padding: 8px;
-    flex-direction: row; /* Maintain row layout for tablet */
+    /* flex-direction: row; / */
     gap: 20px; /* Matches InternShip */
   }
 
   .uni-community-image-container {
-    width: 450px; /* Scaled down to match InternShip */
+    width: 320px; /* Scaled down to match InternShip */
     height: 253px; /* Maintain aspect ratio (550:309) */
     padding: 15px; /* Matches InternShip */
     border-radius: 8px; /* Matches InternShip */
@@ -116,89 +114,20 @@
 
   .uni-community-footer {
     font-size: 16px; /* Matches InternShip */
-    margin-bottom: 15px; /* Matches InternShip */
+    margin: 15px 0; /* Matches InternShip */
+      margin-left: 13%;
+  }
+  .mobile-uni-community-text{
+    margin-left: 0;
   }
 }
 
-/* Mobile */
+/* Mobile Styles */
 @media (max-width: 768px) {
   .uni-community-container {
-    padding-top: 10px; /* Matches InternShip */
-    max-width: 95vw;
-    align-items: center;
-    min-height: auto; /* Matches InternShip */
-  }
-
-  .uni-community-title {
-    font-size: 24px; /* Matches InternShip */
-    line-height: 29px; /* Matches InternShip */
-    margin-bottom: 10px; /* Matches InternShip */
-    text-align: center;
-  }
-
-  .uni-community-content {
-    flex-direction: column; /* Stack vertically to match InternShip */
-    align-items: center;
-    padding: 5px;
-    gap: 15px; /* Matches InternShip */
-  }
-
-  .uni-community-image-container {
-    width: 350px; /* Scaled down to match InternShip */
-    height: 197px; /* Maintain aspect ratio (550:309) */
-    padding: 10px; /* Matches InternShip */
-    border-radius: 6px; /* Matches InternShip */
-    margin-bottom: 0; /* Matches InternShip */
-  }
-
-  .uni-community-image {
-    width: 250px; /* Scaled down proportionally */
-    height: 94px; /* Maintain aspect ratio (400:150) */
-  }
-
-  .uni-community-text {
-    width: 100%;
-    font-size: 12px; /* Matches InternShip */
-    max-width: 90%; /* Matches InternShip */
-    text-align: center; /* Center text on mobile to match InternShip */
-  }
-
-  .uni-community-footer {
-    font-size: 14px; /* Matches InternShip */
-    width: 100%; /* Matches InternShip */
-    margin-bottom: 10px; /* Matches InternShip */
+    display: none !important; /* Hide desktop container on mobile */
   }
 }
- 
-
-
-
-@media screen and (min-width: 768px) {
-  .mobile-uni-community-container {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .uni-community-container {
-    display: none !important;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .mobile-uni-community-container {
   display: flex;
@@ -208,15 +137,14 @@
   margin: auto;
   max-width: 100vw;
   margin-top: 40px;
-    min-height: 400px;
-     
+  min-height: 400px;
 }
 
 .mobile-uni-community-title {
   font-size: 45px; /* Matches InternShip's title size */
   font-weight: 900; /* Matches InternShip */
   color: #696868;
-  width:100%;
+  width: 100%;
   text-align: center;
   letter-spacing: -0.5px;
   font-family: "Inter"; /* Matches InternShip */
@@ -228,26 +156,23 @@
 .mobile-uni-community-content {
   display: flex;
   padding: 10px;
-  flex-direction: column; /* Text on left, image on right to match InternShip */
+  flex-direction: column; /* Stack vertically to match InternShip */
   gap: 20px;
   align-items: center;
   width: 100%;
   justify-content: space-around;
- 
-   
 }
 
 .mobile-uni-community-image-container {
-  width:400px; /* Matches InternShip's dimensions */
-  background-image: url("./communitybg.svg"); 
-  /* background-color: navy; */
+  width: 400px; /* Matches InternShip's dimensions */
+  background-image: url("./communitybg.svg");
   background-repeat: no-repeat;
   background-size: contain; /* Matches InternShip */
   display: flex;
   height: 300px;
   justify-content: center;
   align-items: center;
-  padding: 20px; 
+  padding: 20px;
   border-radius: 10px; /* Matches InternShip */
 }
 
@@ -261,26 +186,71 @@
   width: 100%;
   font-size: 20px; /* Matches InternShip's description size */
   font-weight: 300;
-  margin-bottom: 100px;
   line-height: 1.2;
   color: #000; /* Matches InternShip's description color */
-  text-align: center; /* Aligns text to the left */
+  text-align: center; /* Center text on mobile to match InternShip */
   max-width: 450px; /* Matches InternShip's max-width */
+  margin-bottom: 30px; /* Adjusted to balance spacing */
 }
 
 .mobile-uni-community-footer {
   font-size: 24px; /* Matches InternShip's footer size */
   font-weight: 700;
   display: flex;
- 
   align-self: center;
   color: #000; /* Matches InternShip's footer color */
   width: 100%; /* Matches InternShip's centered layout */
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin: 20px 0; /* Adjusted for consistency */
   text-align: center; /* Matches InternShip */
   text-transform: uppercase; /* Matches InternShip */
 }
 
+/* Mobile-Specific Media Query */
+@media (max-width: 767px) {
+  .mobile-uni-community-container {
+    padding-top: 10px; /* Matches InternShip */
+    max-width: 95vw;
+    min-height: auto; /* Matches InternShip */
+  }
 
+  .mobile-uni-community-title {
+    font-size: 24px; /* Matches InternShip */
+    line-height: 29px; /* Matches InternShip */
+    margin-bottom: 10px; /* Matches InternShip */
+  }
 
+  .mobile-uni-community-content {
+    padding: 5px;
+    gap: 15px; /* Matches InternShip */
+  }
+
+  .mobile-uni-community-image-container {
+    width: 250px; /* Scaled down to match InternShip */
+    height: 197px; /* Maintain aspect ratio (550:309) */
+    padding: 10px; /* Matches InternShip */
+    border-radius: 6px; /* Matches InternShip */
+  }
+
+  .mobile-uni-community-image {
+    width: 250px; /* Scaled down proportionally */
+    height: 94px; /* Maintain aspect ratio (400:150) */
+  }
+
+  .mobile-uni-community-text {
+    font-size: 12px; /* Matches InternShip */
+    max-width: 90%; /* Matches InternShip */
+    margin-bottom: 20px; /* Adjusted for better spacing */
+    margin-left: 0;
+  }
+
+  .mobile-uni-community-footer {
+    font-size: 14px; /* Matches InternShip */
+    margin: 10px 0; /* Matches InternShip */
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-uni-community-container {
+    display: none !important; /* Hide mobile container on desktop */
+  }
+}
