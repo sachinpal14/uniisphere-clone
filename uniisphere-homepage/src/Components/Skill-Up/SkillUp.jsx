@@ -30,7 +30,7 @@ function SkillUp() {
 
         {/* Footer below the content */}
         <h3 className="SkillUp-footer-text">
-          Learn, Improve, and Evolve — One Step at a Time
+          Learn, Improve, and Evolve — <br />One Step at a Time
         </h3>
       </div>
 

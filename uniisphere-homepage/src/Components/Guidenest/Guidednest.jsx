@@ -30,7 +30,7 @@ function Guidednest() {
 
         {/* Footer below the content */}
         <h3 className="Guidednest-footer-text">
-          A Journey of Learning, Led by Those Who’ve Been There
+          A Journey of Learning, Led by Those <br /> Who’ve Been There
         </h3>
       </div>
 

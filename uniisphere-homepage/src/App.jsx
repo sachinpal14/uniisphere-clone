@@ -32,21 +32,21 @@ function App() {
           element={
             <>
             <Navbar />
-              <AboutPage />
-              <Peoples />
-              <Networking/>
+              {/* <AboutPage /> */}
+              {/* <Peoples /> */}
+              {/* <Networking/> */}
               {/* <Connection /> */}
-              <EduValt />
-              <Guidednest/>
-              <SkillUp/>
-              <FreeLancing/>
-              <InternShip/>
-              <HumanLibrary />
-              <Blog />
+              {/* <EduValt /> */}
+              {/* <Guidednest/> */}
+              {/* <SkillUp/> */}
+              {/* <FreeLancing/> */}
+              {/* <InternShip/> */}
+              {/* <HumanLibrary /> */}
+              {/* <Blog /> */}
               <Community/>
-              <Collaborates />
-              <OurGoal />
-              <Features />
+              {/* <Collaborates /> */}
+              {/* <OurGoal /> */}
+              {/* <Features /> */}
             </>
           }
         />

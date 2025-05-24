@@ -1,126 +1,141 @@
-/* Desktop Styles (Unchanged) */
+/* Animation Keyframes (Added for consistency with previous sections) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Styles */
 .uni-blog-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centered to match InternShip */
+  align-items: center;
   width: 100%;
   margin: auto;
   max-width: 100vw;
-  padding-top: 20px; /* Matches InternShip */
-  /* min-height: 100vh; */
+  padding-top: 1.25rem;
+  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation-iteration-count: 1;
 }
 
 .uni-blog-title {
-  font-size: 50px; /* Matches InternShip's title size */
-  font-weight: 900; /* Matches InternShip */
+  font-size: clamp(2rem, 4vw, 3.125rem);
+  font-weight: 900;
   color: #696868;
   width: 65%;
-  text-align: end; /* As provided */
+  text-align: end;
   letter-spacing: -0.5px;
-  font-family: "Inter"; /* Matches InternShip */
-  line-height: 38px; /* Matches InternShip */
-  text-transform: uppercase; /* Matches InternShip */
-  margin-bottom: 20px; /* Matches InternShip */
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 3.125rem;
 }
 
 .uni-blog-content {
   display: flex;
-  padding: 10px;
-  flex-direction: row; /* Text on left, image on right */
+  padding: 0.625rem;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: space-around;
+  gap: 1.25rem;
 }
 
 .uni-blog-image-container {
-  width: 350px; /* Matches InternShip's dimensions */
+  width: 21.875rem;
   background-image: url("./bg.svg");
   background-repeat: no-repeat;
-  background-size: contain; /* Matches InternShip */
+  background-size: contain;
+  background-position: center;
+  height: 15.625rem;
   display: flex;
-  height: 250px;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  border-radius: 10px; /* Matches InternShip */
+  padding: 1.25rem;
+  border-radius: 0.625rem;
 }
 
 .uni-blog-image {
-  width: 400px; /* Matches InternShip's inner image */
-  height: 150px; /* Matches InternShip's inner image */
-  object-fit: contain; /* Ensure foreground image scales properly */
+  width: 25rem;
+  height: 9.375rem;
+  object-fit: contain;
 }
 
 .uni-blog-text {
   width: 45%;
-  font-size: 20px; /* Matches InternShip's description size */
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 400;
   line-height: 1.2;
-  color: #000; /* Matches InternShip's description color */
-  text-align: left; /* As provided */
-  max-width: 450px; /* Matches InternShip's max-width */
+  color: #000;
+  text-align: left;
+  max-width: 28.125rem;
 }
 
 .uni-blog-footer {
-  font-size: 24px; /* Matches InternShip's footer size */
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   font-weight: 700;
   display: flex;
-  margin-right: 120px;
-  align-self: flex-end; /* As provided */
-  color: #333; /* Matches InternShip's footer color */
+  margin-right: 7.5rem;
+  align-self: flex-end;
+  color: #333;
   width: 30%;
-  margin-bottom: 20px; /* Matches InternShip */
-  text-align: center; /* Matches InternShip */
-  text-transform: uppercase; /* Matches InternShip */
+  margin-bottom: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-/* Tablet Styles */
+/* Tablet Styles - Screens up to 1024px (excluding iPad Mini) */
 @media (max-width: 1024px) {
   .uni-blog-container {
-    padding-top: 15px; /* Matches InternShip */
+    padding-top: 0.9375rem;
     max-width: 90vw;
   }
 
   .uni-blog-title {
-    font-size: 28px; /* Matches InternShip */
-    line-height: 34px; /* Matches InternShip */
-    margin-bottom: 15px; /* Matches InternShip */
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    line-height: 1.2;
+    margin-bottom: 0.9375rem;
   }
 
   .uni-blog-content {
-    padding: 8px;
-    flex-direction: row; /* Maintain row layout for tablet */
-    gap: 20px; /* Matches InternShip */
+    padding: 0.5rem;
+    flex-direction: row;
+    gap: 1.25rem;
   }
 
   .uni-blog-image-container {
-    width: 450px; /* Scaled up to match InternShip */
-    height: 253px; /* Maintain aspect ratio */
-    padding: 15px; /* Matches InternShip */
-    border-radius: 8px; /* Matches InternShip */
+    width: 28.125rem;
+    height: 15.8125rem;
+    padding: 0.9375rem;
+    border-radius: 0.5rem;
   }
 
   .uni-blog-image {
-    width: 350px; /* Scaled down proportionally */
-    height: 131px; /* Maintain aspect ratio */
+    width: 21.875rem;
+    height: 8.1875rem;
   }
 
   .uni-blog-text {
     width: 48%;
-    font-size: 13px; /* Matches InternShip */
-    max-width: 350px; /* Matches InternShip */
+    font-size: clamp(0.75rem, 1.8vw, 0.8125rem);
+    max-width: 21.875rem;
   }
 
   .uni-blog-footer {
-    font-size: 16px; /* Matches InternShip */
-    margin-bottom: 15px; /* Matches InternShip */
+    font-size: clamp(0.875rem, 1.8vw, 1rem);
+    margin-bottom: 0.9375rem;
   }
 }
 
-/* Hide Desktop on Mobile */
+/* Mobile Responsiveness - Screens up to 768px (including iPad Mini) */
 @media (max-width: 768px) {
   .uni-blog-container {
-    display: none !important; /* Hide desktop container */
+    display: none !important;
   }
 }
 
@@ -128,85 +143,87 @@
 .mobile-uni-blog-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center all content */
-  justify-content: center; /* Vertically center content */
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin: auto;
   max-width: 100vw;
-  padding-top: 10px; /* Matches InternShip's mobile */
-  min-height: auto; /* Allow natural height */
+  padding-top: 0.625rem;
+  min-height: auto;
+  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation-iteration-count: 1;
 }
 
 .mobile-uni-blog-title {
-  font-size: 24px; /* Matches InternShip's mobile title size */
-  font-weight: 900; /* Matches InternShip */
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  font-weight: 900;
   color: #696868;
   width: 100%;
-  text-align: center; /* Ensure centered */
+  text-align: center;
   letter-spacing: -0.5px;
-  font-family: "Inter"; /* Matches InternShip */
-  line-height: 29px; /* Matches InternShip */
-  text-transform: uppercase; /* Matches InternShip */
-  margin-bottom: 10px; /* Matches InternShip */
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
 }
 
 .mobile-uni-blog-content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content */
-  justify-content: center; /* Vertically center */
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 5px;
-  gap: 15px; /* Matches InternShip */
+  padding: 0.3125rem;
+  gap: 0.9375rem;
 }
 
 .mobile-uni-blog-image-container {
-  width: 350px; /* Matches InternShip's mobile dimensions */
+  width: clamp(17.5rem, 80vw, 21.875rem);
   background-image: url("./bg.svg");
   background-repeat: no-repeat;
-  background-size: contain; /* Matches InternShip */
-  background-position: center; /* Ensure background is centered */
+  background-size: contain;
+  background-position: center;
+  height: clamp(9.8125rem, 60vw, 12.3125rem);
   display: flex;
-  height: 197px; /* Maintain aspect ratio */
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-radius: 6px; /* Matches InternShip */
+  padding: 0.625rem;
+  border-radius: 0.375rem;
 }
 
 .mobile-uni-blog-image {
-  width: 250px; /* Matches InternShip's mobile inner image */
-  height: 94px; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure foreground image scales properly */
+  width: clamp(12.5rem, 50vw, 15.625rem);
+  height: clamp(4.6875rem, 20vw, 5.875rem);
+  object-fit: contain;
 }
 
 .mobile-uni-blog-text {
   width: 100%;
-  font-size: 12px; /* Matches InternShip's mobile description size */
+  font-size: clamp(0.75rem, 3vw, 0.875rem);
   font-weight: 400;
   line-height: 1.2;
-  color: #000; /* Matches InternShip's description color */
-  text-align: center; /* Ensure centered */
-  max-width: 90%; /* Matches InternShip */
-  margin: 0 auto 10px; /* Center with auto margins, match InternShip spacing */
+  color: #000;
+  text-align: center;
+  max-width: 95%;
+  margin: 0 auto 0.625rem;
 }
 
 .mobile-uni-blog-footer {
-  font-size: 14px; /* Matches InternShip's mobile footer size */
+  font-size: clamp(0.75rem, 3vw, 0.875rem);
   font-weight: 700;
   display: flex;
   align-self: center;
-  justify-content: center; /* Ensure text is centered */
-  color: #333; /* Matches InternShip's footer color */
+  justify-content: center;
+  color: #333;
   width: 100%;
-  margin: 10px 0; /* Matches InternShip */
-  text-align: center; /* Matches InternShip */
-  text-transform: uppercase; /* Matches InternShip */
+  margin: 0.625rem 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Hide Mobile on Desktop */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .mobile-uni-blog-container {
-    display: none !important; /* Hide mobile container on desktop */
+    display: none !important;
   }
 }
