@@ -1,4 +1,4 @@
-/* Animation Keyframes (Added for consistency with previous sections) */
+/* Animation Keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -19,7 +19,7 @@
   margin: auto;
   max-width: 100vw;
   padding-top: 1.25rem;
-  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation: fadeIn 1s ease-in-out forwards;
   animation-iteration-count: 1;
 }
 
@@ -89,56 +89,6 @@
   text-transform: uppercase;
 }
 
-/* Tablet Styles - Screens up to 1024px (excluding iPad Mini) */
-@media (max-width: 1024px) {
-  .uni-blog-container {
-    padding-top: 0.9375rem;
-    max-width: 90vw;
-  }
-
-  .uni-blog-title {
-    font-size: clamp(1.5rem, 3vw, 1.75rem);
-    line-height: 1.2;
-    margin-bottom: 0.9375rem;
-  }
-
-  .uni-blog-content {
-    padding: 0.5rem;
-    flex-direction: row;
-    gap: 1.25rem;
-  }
-
-  .uni-blog-image-container {
-    width: 28.125rem;
-    height: 15.8125rem;
-    padding: 0.9375rem;
-    border-radius: 0.5rem;
-  }
-
-  .uni-blog-image {
-    width: 21.875rem;
-    height: 8.1875rem;
-  }
-
-  .uni-blog-text {
-    width: 48%;
-    font-size: clamp(0.75rem, 1.8vw, 0.8125rem);
-    max-width: 21.875rem;
-  }
-
-  .uni-blog-footer {
-    font-size: clamp(0.875rem, 1.8vw, 1rem);
-    margin-bottom: 0.9375rem;
-  }
-}
-
-/* Mobile Responsiveness - Screens up to 768px (including iPad Mini) */
-@media (max-width: 768px) {
-  .uni-blog-container {
-    display: none !important;
-  }
-}
-
 /* Mobile Styles */
 .mobile-uni-blog-container {
   display: flex;
@@ -150,13 +100,13 @@
   max-width: 100vw;
   padding-top: 0.625rem;
   min-height: auto;
-  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation: fadeIn 1s ease-in-out forwards;
   animation-iteration-count: 1;
 }
 
 .mobile-uni-blog-title {
-  font-size: 24px; /* Matches InternShip's mobile title size */
-  font-weight: 900; /* Matches InternShip */
+  font-size: clamp(1.25rem, 4vw, 1.5rem); /* Adjusted to use clamp for consistency */
+  font-weight: 900;
   color: #696868;
   width: 100%;
   text-align: center;
@@ -199,17 +149,17 @@
 
 .mobile-uni-blog-text {
   width: 100%;
-  font-size: 12px; /* Matches InternShip's mobile description size */
+  font-size: clamp(0.75rem, 3vw, 0.875rem); /* Adjusted to use clamp for consistency */
   font-weight: 400;
   line-height: 1.2;
-  color: #000; /* Matches InternShip's description color */
-  text-align: center; /* Ensure centered */
-  max-width: 90%; /* Matches InternShip */
-  margin: 0 auto 10px; /* Center with auto margins, match InternShip spacing */
+  color: #000;
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto 0.625rem;
 }
 
 .mobile-uni-blog-footer {
-  font-size: 14px; /* Matches InternShip's mobile footer size */
+  font-size: clamp(0.75rem, 3vw, 0.875rem); /* Adjusted to use clamp for consistency */
   font-weight: 700;
   display: flex;
   align-self: center;
@@ -221,8 +171,19 @@
   text-transform: uppercase;
 }
 
-/* Hide Mobile on Desktop */
-@media (min-width: 769px) {
+/* Responsiveness for all iPads and smaller screens (up to 1024px) */
+@media only screen and (max-width: 1024px) {
+  .uni-blog-container {
+    display: none !important;
+  }
+
+  .mobile-uni-blog-container {
+    display: flex !important;
+  }
+}
+
+/* Desktop Styles (above 1024px) */
+@media only screen and (min-width: 1025px) {
   .mobile-uni-blog-container {
     display: none !important;
   }

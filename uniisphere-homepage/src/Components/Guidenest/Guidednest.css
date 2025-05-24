@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 350px;
+  gap: clamp(2rem, 30vw, 25rem);
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 1.25rem;
@@ -64,7 +64,7 @@
 .Guidednest-image {
   width: 16.875rem;
   height: 12.75rem;
-  object-fit: contain; /* Added to ensure proper image scaling */
+  object-fit: contain;
 }
 
 .Guidednest-description {
@@ -86,52 +86,8 @@
   text-transform: capitalize;
 }
 
-/* iPad (Tablet) Responsiveness - Screens up to 1024px but above 768px */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .Guidednest-container {
-    padding: 0.9375rem;
-  }
-
-  .Guidednest-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.2;
-    margin-left: 7%;
-    margin-bottom: 1.875rem;
-  }
-
-  .Guidednest-content {
-    gap: 3.125rem;
-    padding: 0 0.9375rem;
-  }
-
-  .Guidednest-image-container {
-    padding: 0.9375rem;
-    border-radius: 0.5rem;
-    width: 21.875rem;
-    height: 16.375rem;
-  }
-
-  .Guidednest-image {
-    width: 14.375rem;
-    height: 10.875rem;
-  }
-
-  .Guidednest-description {
-    font-size: clamp(0.875rem, 1.8vw, 1rem);
-    max-width: 21.875rem;
-  }
-
-  .Guidednest-footer-text {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    margin-left: 7%;
-    margin-top: 0.9375rem;
-    margin-bottom: 1.875rem;
-    text-align: center;
-  }
-}
-
-/* Mobile and iPad Mini Responsiveness - Screens up to 768px */
-@media only screen and (max-width: 768px) {
+/* Mobile Responsiveness - Screens up to 1024px (including all iPads) */
+@media only screen and (max-width: 1024px) {
   .Guidednest-container {
     display: none !important;
   }
@@ -193,7 +149,7 @@
 .mobile-Guidednest-image {
   width: clamp(10rem, 50vw, 12.5rem);
   height: clamp(7.5rem, 37.5vw, 9.375rem);
-  object-fit: contain; /* Added to ensure proper image scaling */
+  object-fit: contain;
 }
 
 .mobile-Guidednest-description {
@@ -213,7 +169,7 @@
 }
 
 /* Hide Mobile on Desktop */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   .mobile-Guidednest-container {
     display: none !important;
   }

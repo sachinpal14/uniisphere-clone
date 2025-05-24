@@ -12,7 +12,7 @@
 
 /* Desktop Styles */
 .EduValt-container {
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   padding: 1.25rem;
   width: 100%;
@@ -20,7 +20,7 @@
   text-align: center;
   position: relative;
   font-family: "Inter", sans-serif;
-  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation: fadeIn 1s ease-in-out forwards;
   animation-iteration-count: 1;
 }
 
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(2rem, 30vw, 33.75rem);
+  gap: clamp(2rem, 30vw, 21.875rem);
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 1.25rem;
@@ -63,6 +63,7 @@
 .EduValt-image {
   width: 18.75rem;
   height: auto;
+  object-fit: contain; /* Added to ensure proper image scaling */
 }
 
 .EduValt-text-and-tag-container {
@@ -126,66 +127,8 @@
   text-transform: capitalize;
 }
 
-/* Tablet Responsiveness - Screens up to 1024px (excluding iPad Mini) */
-@media (max-width: 1024px) {
-  .EduValt-container {
-    padding: 0.9375rem;
-  }
-
-  .EduValt-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.2;
-    margin-right: 7%;
-    margin-bottom: 1.875rem;
-  }
-
-  .EduValt-content {
-    gap: 3.125rem;
-    padding: 0 0.9375rem;
-  }
-
-  .EduValt-image-container {
-    padding: 0.9375rem;
-    border-radius: 0.5rem;
-    width: 21.875rem;
-    height: 16.375rem;
-  }
-
-  .EduValt-image {
-    width: 15.625rem;
-  }
-
-  .EduValt-text-and-tag-container {
-    font-size: clamp(0.875rem, 1.8vw, 1rem);
-    max-width: 21.875rem;
-    gap: 0.9375rem;
-  }
-
-  .EduValt-tag-container {
-    gap: 0.5rem;
-    max-width: 25rem;
-  }
-
-  .EduValt-each-tag {
-    width: 7.5rem;
-    height: 2.25rem;
-    border-radius: 0.625rem;
-  }
-
-  .EduValt-tag-text {
-    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
-  }
-
-  .EduValt-footer-text {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    margin-right: 7%;
-    margin-top: 0.9375rem;
-    margin-bottom: 1.875rem;
-  }
-}
-
-/* Mobile Responsiveness - Screens up to 768px (including iPad Mini) */
-@media only screen and (max-width: 768px) {
+/* Mobile Responsiveness - Screens up to 1024px (including all iPads) */
+@media only screen and (max-width: 1024px) {
   .EduValt-container {
     display: none !important;
   }
@@ -207,7 +150,7 @@
   text-align: center;
   position: relative;
   font-family: "Inter", sans-serif;
-  animation: fadeIn 1s ease-in-out forwards; /* Added for consistency */
+  animation: fadeIn 1s ease-in-out forwards;
   animation-iteration-count: 1;
 }
 
@@ -247,6 +190,7 @@
 .mobile-EduValt-image {
   width: clamp(10rem, 50vw, 12.5rem);
   height: auto;
+  object-fit: contain; /* Added to ensure proper image scaling */
 }
 
 .mobile-EduValt-text-and-tag-container {
@@ -316,7 +260,7 @@
 }
 
 /* Hide Mobile on Desktop */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   .mobile-EduValt-container {
     display: none !important;
   }

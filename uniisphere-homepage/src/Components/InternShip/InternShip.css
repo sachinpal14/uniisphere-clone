@@ -71,46 +71,6 @@
   text-transform: uppercase;
 }
 
-/* Tablet Responsiveness - Screens up to 1024px (excluding iPad Mini) */
-@media (max-width: 1024px) {
-  .InternShip-container {
-    padding: 1.5rem;
-  }
-
-  .InternShip-title {
-    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-    line-height: 1.2;
-    margin-right: 10%;
-  }
-
-  .InternShip-content {
-    gap: 0.9375rem;
-    padding: 0.9375rem;
-  }
-
-  .InternShip-image-container {
-    width: 21.875rem;
-    height: 16.875rem;
-  }
-
-  .InternShip-description {
-    font-size: clamp(0.875rem, 1.8vw, 1rem);
-    max-width: 25rem;
-  }
-
-  .InternShip-footer-text {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    margin-right: 5%;
-  }
-}
-
-/* Mobile Responsiveness - Screens up to 768px (including iPad Mini) */
-@media (max-width: 768px) {
-  .InternShip-container {
-    display: none !important;
-  }
-}
-
 /* Mobile Styles */
 .mobile-InternShip-container {
   display: flex;
@@ -175,8 +135,19 @@
   text-align: center;
 }
 
-/* Hide mobile container on larger screens */
-@media (min-width: 769px) {
+/* Responsiveness for all iPads and smaller screens (up to 1024px) */
+@media only screen and (max-width: 1024px) {
+  .InternShip-container {
+    display: none !important;
+  }
+
+  .mobile-InternShip-container {
+    display: flex !important;
+  }
+}
+
+/* Desktop Styles (above 1024px) */
+@media only screen and (min-width: 1025px) {
   .mobile-InternShip-container {
     display: none !important;
   }

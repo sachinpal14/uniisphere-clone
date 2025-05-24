@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(2rem, 30vw, 37.5rem);
+  gap: 400px;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 2rem;
@@ -63,7 +63,7 @@
 .FreeLancing-image {
   width: 12.5rem;
   height: 15.5625rem;
-  object-fit: contain; /* Added to ensure proper image scaling */
+  object-fit: contain;
 }
 
 .FreeLancing-description {
@@ -82,60 +82,6 @@
   font-weight: bold;
   color: #333;
   text-transform: capitalize;
-}
-
-/* Tablet Responsiveness - Screens up to 1024px (excluding iPad Mini) */
-@media (max-width: 1024px) {
-  .FreeLancing-container {
-    padding: 1.5rem;
-  }
-
-  .FreeLancing-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.2;
-    margin-left: 7%;
-    margin-bottom: 2rem;
-  }
-
-  .FreeLancing-content {
-    gap: 3rem;
-    padding: 0 1.5rem;
-  }
-
-  .FreeLancing-image-container {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    width: 21.875rem;
-    height: 16.375rem;
-  }
-
-  .FreeLancing-image {
-    width: 10.9375rem;
-    height: 13.625rem;
-  }
-
-  .FreeLancing-description {
-    font-size: clamp(0.875rem, 1.8vw, 1rem);
-    max-width: 21.875rem;
-  }
-
-  .FreeLancing-footer-text {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    margin-left: 7%;
-    margin-top: 0.9375rem;
-    margin-bottom: 1.875rem;
-  }
-}
-
-/* Mobile Responsiveness - Screens up to 768px (including iPad Mini) */
-@media only screen and (max-width: 768px) {
-  .FreeLancing-container {
-    display: none !important;
-  }
-
-  .mobile-FreeLancing-container {
-    display: flex !important; /* Explicitly ensure mobile container is shown */
-  }
 }
 
 /* Mobile Styles */
@@ -191,7 +137,7 @@
 .mobile-FreeLancing-image {
   width: clamp(7.5rem, 40vw, 9.375rem);
   height: clamp(9.375rem, 50vw, 11.6875rem);
-  object-fit: contain; /* Added to ensure proper image scaling */
+  object-fit: contain;
 }
 
 .mobile-FreeLancing-description {
@@ -212,8 +158,19 @@
   text-align: center;
 }
 
-/* Hide Mobile on Desktop */
-@media only screen and (min-width: 769px) {
+/* Responsiveness for all iPads and smaller screens (up to 1024px) */
+@media only screen and (max-width: 1024px) {
+  .FreeLancing-container {
+    display: none !important;
+  }
+
+  .mobile-FreeLancing-container {
+    display: flex !important;
+  }
+}
+
+/* Desktop Styles (above 1024px) */
+@media only screen and (min-width: 1025px) {
   .mobile-FreeLancing-container {
     display: none !important;
   }
