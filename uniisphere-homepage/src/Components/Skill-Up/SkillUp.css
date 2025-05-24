@@ -73,7 +73,7 @@
   text-align: left;
 }
 
-.SkillUp-footer-text̶ {
+.SkillUp-footer-text {
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   text-align: end;
   margin-right: 15%;
@@ -83,8 +83,11 @@
   color: #333;
   max-width: 25rem;
   display: flex;
+  justify-content: flex-end; /* Ensure content is aligned to the right */
   align-self: flex-end;
   text-transform: capitalize;
+  width: 100%; /* Ensure it spans the container for alignment */
+  box-sizing: border-box; /* Prevent padding/margin issues */
 }
 
 /* Mobile Styles (applied to all iPads and smaller screens) */
@@ -153,10 +156,13 @@
   font-size: clamp(1rem, 3.5vw, 1.125rem);
   font-weight: bold;
   color: #333;
-  /* width: 100%; */
-  /* margin: 0.9375rem 0; */
-  text-align: end;
+  text-align: center; /* Center for mobile/iPad view */
   text-transform: capitalize;
+  width: 100%;
+  margin: 0.9375rem auto; /* Center with auto margins */
+  display: flex;
+  justify-content: center; /* Ensure content is centered */
+  box-sizing: border-box; /* Prevent padding/margin issues */
 }
 
 /* Responsiveness for all iPads and smaller screens (up to 1024px) */
